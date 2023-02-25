@@ -38,7 +38,8 @@
 
   챌린지) 
   1) Centos vs Ubuntu 차이 
-  2) MySQL5.7 vs MySQL8.0 차이
+  2) 쉡 스크립트란?
+  3) MySQL5.7 vs MySQL8.0 차이
   ```
  * 환경셋팅 - [https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00](https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00)
 </div>
