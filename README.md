@@ -32,7 +32,7 @@
  
   2) 해당 레포지토리 fork & PR 해보기
  
-  3) Linux Setting 환경 -> window 사용자는 wsl2 설치, mac 사용자는 homebrew&iterm 설치
+  3) Linux Setting 환경 -> window 사용자는 wsl2 설치, mac 사용자는 homebrew&iterm2 설치
   
   4) Linux 명령어 + MySQL SQL 학습
 
