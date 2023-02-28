@@ -4,7 +4,8 @@
  ~~e2e 테스트용 postman~~ > Httpie & postman 설치 </br>
  ~~git/github bash, zsh 설치~~ > 완료 </br>
  ~~putty or MobaXterm 설치~~ > MobaXtermt설치</br>
-</br>
+</br></br>
+
 2) ~~해당 레포지토리 fork & PR 해보기~~ >완료</br>
 
 3) ~~Linux Setting 환경 -> window 사용자는 wsl2 설치, mac 사용자는 homebrew&iterm2 설치~~ >완료</br>
