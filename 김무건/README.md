@@ -13,7 +13,7 @@
 
 4) Linux 명령어 + MySQL SQL 학습
 
-챌린지) 
+- 챌린지) 
 1) Centos vs Ubuntu 차이 
 2) 쉡 스크립트란? 
 3) MySQL5.7 vs MySQL8.0 차이 > Ing

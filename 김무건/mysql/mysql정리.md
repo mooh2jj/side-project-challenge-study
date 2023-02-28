@@ -1,4 +1,4 @@
-## MySQL 정리
+## MySQL 정리!
 1. 인덱스
 - https://pos04167.tistory.com/118
 
