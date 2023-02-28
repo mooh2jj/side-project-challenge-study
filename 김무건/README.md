@@ -13,7 +13,6 @@
 
 4) Linux 명령어 + MySQL SQL 학습
 
-
 챌린지) 
 1) Centos vs Ubuntu 차이 
 2) 쉡 스크립트란? 
