@@ -22,3 +22,7 @@
 - 지원되는 아키텍처 : CentOS는 x86, x86_64, IA-64, PowerPC 등 다양한 아키텍처를 지원합니다. Ubuntu는 x86, x86_64, ARM 등을 지원합니다.
 
 - 라이선스 : CentOS는 Red Hat Enterprise Linux(RHEL)의 소스 코드를 무료로 사용 가능한 CentOS Public License를 사용합니다. Ubuntu는 GNU General Public License(GPL)을 사용합니다.
+***
+2) 쉡 스크립트란?
+- Shell 명령어들을 텍스트 파일이 모아서 실행해주는 개념
+- 컴파일 없이 리눅스 환경에서 쉘을 인터프리터로 바로 해석해서 실행시켜줌 -> 간단명령 구현에 사용
