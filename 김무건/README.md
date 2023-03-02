@@ -36,7 +36,7 @@
 - 이것에 대한 예시를 보면 톰켓에 대한 배치파일이 있는데 일반적으로 톰켓을 사용하는 방식은 IDE에 톰켓을 설정하거나
 Spring Boot의 내장톰켓을 사용한다. 하지만 이것 이외에 cmd를 통하여 톰켓의 실행 배치파일을 실행하면 된다.
 
-![img.png](img.png)
+![image](https://user-images.githubusercontent.com/103854287/222440949-9a2cc436-73ac-4995-8396-37c0c00ee480.png)
 
 3) MySQL5.7 vs MySQL8.0 차이 > Ing
 - 
