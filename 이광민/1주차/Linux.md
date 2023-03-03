@@ -1,3 +1,6 @@
+- gcc H.c : H.c를 컴파일
+- gcc h.c -o g : h.c를 g라는 파일명을 가진 실행파일로일컴파일
+- pwd : 현재 파일 경로
 - ls : 현재 위치의 파일 목록 조회
   - ls -l : 파일의 상세정보
   - ls -a : 숨김 파일 표시
@@ -40,7 +43,10 @@
   - mv file1 /dir : file1 파일을 dir 디렉터리로 이동
   - mv file1 file2 /dir : 여러 개의 파일을 dir 디렉터리로 이동
   - mv /dir1 /dir2 : dir1 디렉터리를 dir2 디렉터리로 이름 변경
+- ps : 프로세스 작업상태 확인
+- kill 프로세스 번호 : 프로세스 종료
 - rm : 파일 삭제
+  - r : 하위 디렉토리까지 삭제
   - rm file1 : file1을 삭제
   - rm -f file1 : file1을 강제 삭제
   - rm -r dir : dir 디렉터리 삭제 (디렉터리는 -r 옵션 없이 삭제 불가)
