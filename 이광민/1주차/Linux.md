@@ -1,1 +1,66 @@
-- 명령어
+- ls : 현재 위치의 파일 목록 조회
+  - ls -l : 파일의 상세정보
+  - ls -a : 숨김 파일 표시
+  - ls -t : 파일들을 생성시간순(제일 최신 것부터)으로 표시
+  - ls -rt : 파일들을 생성시간순(제일 오래된 것부터)으로 표시
+  - ls -f : 파일 표시 시 마지막 유형에 나타내는 파일명을 끝에 표시('/' : 디렉터리, '*' : 실행파일, '@' : 링크 등등,,,)
+  - ls -al : 숨긴 파일까지 모두 상세 정보 표시
+- cd : 디렉터리 이동
+  - cd [디렉터리 경로] : 이동하려는 디렉터리로 이동 (경로 입력 시 '[', ']'부분은 빼고 입력!)
+  - cd ~ : 홈 디렉터리로 이동
+  - cd / : 최상위 디렉터리로 이동
+  - cd . : 현재 디렉터리 
+  - cd .. : 상위 디렉터리로 이동
+  - cd - : 이전 경로로 이동
+- touch : 0바이트 파일 생성, 파일의 날짜와 시간을 수정
+  - touch filename : filename의 파일을 생성
+  - touch -c filename : filename의 시간을 현재시간으로 갱신
+  - touch -t 202110291608 filename : filename의 시간을 날짜 정보(YYYYMMDDhhmm)로 갱신(20211029160 => 2021.10.29.16:08)
+  - touch -r oldfile newfile  : newfile의 날짜 정보를 oldfile의 날짜 정보와 동일하게 변경
+- mkdir : 디렉터리 생성
+  - mkdir dirname : dirname이라는 디렉터리 생성
+  - mkdir dir1 dir2: 한 번에 여러 개의 디렉터리 생성
+  - mkdir -p dirname/sub_dirname : dirname이라는 디렉터리 생성, sub_dirname이라는 하위 디렉터리도 생성
+  - mkdir -m 700 dirname : 특정 퍼미션(권한)을 갖는 디렉터리 생성
+- chmod ()()() : ()안의 숫자에 따라 처음 () : 사용자, 두번 째 () : 그룹, 세번 째 () : 모든 유저를 뜻한다.
+  - 000 : 아무 권한 없음
+  - 001 : 실행만 가능
+  - 010 : 쓰기 가능
+  - 011 : 쓰기 실행 가능
+  - 100 : 읽기만 가능
+  - 101 : 읽기 실행 가능
+  - 110 : 읽기 쓰기 가능
+  - 111 : 모든 권한 존재
+- cp : 파일 복사
+  - cp file1 file2 : file1을 file2라는 이름으로 복사
+  - cp -f file1 file2 : 강제 복사(file2라는 파일이 이미 있을 경우 강제로 기존 file2를 지우고 복사 진행)
+  - cp -r dir1 dir2 : 디렉터리 복사. 폴더 안의 모든 하위 경로와 파일들을 복사
+- mv : 파일 이동
+  - mv file1 file2 : file1 파일을 file2 파일로 변경
+  - mv file1 /dir : file1 파일을 dir 디렉터리로 이동
+  - mv file1 file2 /dir : 여러 개의 파일을 dir 디렉터리로 이동
+  - mv /dir1 /dir2 : dir1 디렉터리를 dir2 디렉터리로 이름 변경
+- rm : 파일 삭제
+  - rm file1 : file1을 삭제
+  - rm -f file1 : file1을 강제 삭제
+  - rm -r dir : dir 디렉터리 삭제 (디렉터리는 -r 옵션 없이 삭제 불가)
+- rmdir : 디렉터리 삭제
+- cat : 파일의 내용을 화면에 출력, 리다이렉션 기호('>')를 사용하여 새로운 파일 생성
+  - cat file1 : file1의 내용을 출력
+  - cat file1 file2 : file1과 file2의 내용을 출력
+  - cat file1 file2 | more : file1과 file2의 내용을 페이지별로 출력
+  - cat file1 file2 | head : file1과 file2의 내용을 처음부터 10번째 줄까지만 출력
+  - cat file1 file2 | tail : file1과 file2의 내용을 끝에서부터 10번째 줄까지만 출력
+- redirection : 화면의 출력 결과를 파일로 저장
+  - '>' 기호 : 기존에 있는 파일 내용을 지우고 저장
+  - '>>' 기호 : 기존 파일 내용 뒤에 덧붙여서 저장
+  - '<' 기호 : 파일의 데이터를 명령에 입력
+  - cat file1 firle2 > file3 : file1, file2의 명령 결과를 합쳐서 file3라는 파일에 저장
+  - car file4 >> file3 : file3에 file4의 내용 추가
+  - cat < file1 : file1의 결과 출력
+  - cat < file1 > file2 : file1의 출력 결과를 file2에 저장 
+- alias : 자주 사용하는 명령어들을 별명으로 정의하여 쉽게 사용할 수 있도록 설정
+  - alias 별명 = '명령어 정의'
+  - alias lsa = 'ls-a':lsa
+- unalias : 예약어 해제
+  - unalias lsa : lsa 예약어 
