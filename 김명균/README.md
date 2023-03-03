@@ -1,2 +1,9 @@
-- KMK
-
+ 1주차 정리
+- IntelliJ 설치 완료
+- HeidiSQL 설치 완료 
+- Postman 설치 완료
+- git bash 설치 완료
+- MobaXterm 설치 완료
+- Repository fork/pr 완료
+- Linux 셋팅 실패
+- MySQL 학습: https://wiry-boron-6b7.notion.site/SQL-3f6f96384c244a2a8e793603e2efa91a
