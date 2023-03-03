@@ -7,3 +7,4 @@
 - Repository fork/pr 완료
 - Linux 셋팅 실패
 - MySQL 학습: https://wiry-boron-6b7.notion.site/SQL-3f6f96384c244a2a8e793603e2efa91a
+- CentOS vs Ubuntu: https://www.notion.so/Centos-VS-Ubuntu-5c777a98ca374c36829557e8b8ad4745?pvs=4
