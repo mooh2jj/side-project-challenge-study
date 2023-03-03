@@ -1,1 +1,4 @@
-1
+- Centos vs Ubuntu 차이 
+  - 1
+- 쉡 스크립트란?
+- MySQL5.7 vs MySQL8.0 차이
