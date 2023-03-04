@@ -151,3 +151,38 @@ FORMAT	변환 결과
 ```
 SELECT DISTINCT column1 FROM table;
 ```
+## JOIN
+
+![image](https://user-images.githubusercontent.com/43610417/222868517-c9349de2-bf5b-4fa5-976d-c278278abbec.png)
+
+### LEFT JOIN
+
+![image](https://user-images.githubusercontent.com/43610417/222868694-e4aa0e23-9b7c-4d90-8119-8b81f9b7d49c.png)
+
+- A TABLE
+
+![image](https://user-images.githubusercontent.com/43610417/222868555-d66592af-dce2-48ac-943f-4ab98e5965e7.png)
+
+- B TABLE
+
+![image](https://user-images.githubusercontent.com/43610417/222868558-4babb1e6-bec4-4e0d-8e4a-623b30523009.png)
+
+- 결과
+
+![image](https://user-images.githubusercontent.com/43610417/222868580-9e273fbf-0c99-4bff-bce8-36deeac54ea2.png)
+
+```
+select a.id, a.name, a.age, b.school, b.explanation from a
+left join b on a.id = b.id
+order by a.id asc;
+```
+
+### INNER JOIN
+
+![image](https://user-images.githubusercontent.com/43610417/222868674-b8062911-0541-47c0-ae14-59fc62a325ad.png)
+
+### OUTER JOIN
+
+![image](https://user-images.githubusercontent.com/43610417/222868700-15ffa359-5f5d-4e19-bc3a-f79436c145d1.png)
+
+사진 출처 : https://futurists.tistory.com/17, https://yoo-hyeok.tistory.com/98
