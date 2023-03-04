@@ -41,6 +41,4 @@
 - 트랜잭션이 시작되지 전에 커밋된 내용에 대해서만 조회가 가능하다.
 ### SERIALIZABLE
 - 가장 엄격한 격리 수준으로 읽기 작업에도 공유 잠금을 설정하여 동시에 다른 트랜잭션에서 이 레코드르 변경하지 못하게 한다.
-## isolation level
-- 
 - https://joont92.github.io/db/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B2%A9%EB%A6%AC-%EC%88%98%EC%A4%80-isolation-level/
