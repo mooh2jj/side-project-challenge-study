@@ -43,11 +43,13 @@
   ```
  * 환경셋팅 - [https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00](https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00)
 </div>
+</details>
 
+<details>
 <summary>1week(2023/03/04)</summary>
 <div markdown="1">
 
-  * 각 개인 면담 진행 => 추후 스터디 별도 과제 진행할 것
+  * 각 개인 면담 진행 => 추후 각개인에 맞는 스터디 과제도 진행할 것
   * 웹개발자가 보는 대표 server 4개 정리
   * Liunx, DB서버, git의 존재 이유
   * 간단한 Linux 명령어 정리
@@ -74,3 +76,4 @@
  * 정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
 </div>
 </details>
+
