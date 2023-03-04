@@ -130,6 +130,15 @@ IFNULL(expr1, expr2) : expr1이 NULL이면 expr2를 리턴하고, NULL이 아니
 ```
 date_format(HIRE_YMD, '%Y-%m-%d')
 
+YEAR('2011-00-09 07:18:59')
+2011 출력
+
+MONTH('2011-00-09 07:18:59')
+00 출력
+
+DATE('2011-10-09 07:18:59')
+2011-10-09 출
+
 FORMAT	변환 결과
 %M	월(Janeary, December, ...)
 %m	월(01,02, ..., 12)
