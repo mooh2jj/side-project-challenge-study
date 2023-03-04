@@ -55,25 +55,14 @@
   * 간단한 Linux 명령어 정리
   * 과제
   ```
-  1) 사용 툴 설치 및 이해하기 
-   * IntelliJ(얼티메이트 버전 추천-플러그인 사용 가능)
-   * MySQL, DB 접속 HediSQL or Dbeaver
-   * e2e 테스트용 postman
-   * git/github bash, zsh 설치
-   * putty or MobaXterm 설치
- 
-  2) 해당 레포지토리 fork & PR 해보기
- 
-  3) Linux Setting 환경 -> window 사용자는 wsl2 설치, mac 사용자는 homebrew&iterm2 설치
-  
-  4) Linux 명령어 + MySQL SQL 학습
+1) git-flow 란 무엇인지 정리
+2) git 대표적 명령어 정리
 
-  챌린지) 
-  1) Centos vs Ubuntu 차이 
-  2) 쉡 스크립트란?
-  3) MySQL5.7 vs MySQL8.0 차이
-  ```
- * 정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
+3) MySQL에서 DB 테이블 설계시 중요 요소 각 정리
+
+챌린지) 각 개별로 드립니다. 
+```
+* 1주차 정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
 </div>
 </details>
 
