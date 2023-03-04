@@ -33,13 +33,78 @@ SELECT COUNT(*) FROM TableName;
 ```
 ### GROUP BY
 - 데이터를 정렬하고 조건에 맞는 그룹끼리 모아준다.
+- 예시 TABLE : hero_collection
+
+|IDX|TYPE|NAME|
+|------|---|---|
+|1|1|안중근|
+|2|1|윤봉길|
+|3|2|김유신|
+|4|2|이순신|
+|5|3|이성계|
+|6|3|왕건|
+|7|4|반갑수|
+
+```
+type 그룹화하여 name 갯수 조회 (컬럼 그룹화)
+
+SELECT type, COUNT(name) AS cnt FROM hero_collection GROUP BY type;
 ```
 
+|TYPE|CNT|
+|------|---|
+|1|2|
+|2|2|
+|3|2|
+|4|1|
+
+```
+type 1 초과인, type 그룹화하여 name 갯수 조회 (조건 처리 후 컬럼 그룹화)
+
+SELECT type, COUNT(name) AS cnt FROM hero_collection WHERE type > 1 GROUP BY type;
+```
+|TYPE|CNT|
+|------|---|
+|2|2|
+|3|2|
+|4|1|
+
+```
+type 그룹화하여 name 갯수를 가져온 후, 그 중에 갯수가 2개 이상인 데이터 조회 (조건 처리 후에 컬럼 그룹화 후에 조건 처리)
+
+SELECT type, COUNT(name) AS cnt FROM hero_collection GROUP BY type HAVING cnt >= 2;
+```
+
+|TYPE|CNT|
+|------|---|
+|1|2|
+|2|2|
+|3|2|
+
+```
+type 1 초과인, type 그룹화하여 name 갯수를 가져온 후, 그 중에 갯수가 2개 이상인 데이터를 type 내림차순 정렬로 조회 (내림차순 정렬)
+
+SELECT type, COUNT(name) AS cnt FROM hero_collection
+WHERE type > 1 GROUP BY type HAVING cnt >= 2 ORDER BY type DESC;
+```
+
+|TYPE|CNT|
+|------|---|
+|3|2|
+|2|2|
+
+### IF
+```
+IF(expr1, expr2, expr3) : expr1이 TRUE 이면 expr2를 리턴하고, 그렇지 않은 경우 expr3를 리턴한다.
 ```
 ### IFNULL
 - COLUMN의 값이 NULL일 경우 ''안의 값으로 대체하여 출력한다.
 ```
-IFNULL(TLNO,'NONE') AS TLNO 
+IFNULL(TLNO,'NONE') AS TLNO : TLNO의 값이 NULL인 COLUMNS들을 NONE으로 대체하여 출력하고 COLUMNS이름을 TLNO로 만든다.
+
+IF(expr1, expr2, expr3) : expr1이 TRUE 이면 expr2를 리턴하고, 그렇지 않은 경우 expr3를 리턴한다.
+
+IFNULL(expr1, expr2) : expr1이 NULL이면 expr2를 리턴하고, NULL이 아니면 expr1을 리턴한다.
 ```
 ### DATA_FORMAT
 - 해당 DATA를 원하는 출력 값에 맞게 출력 가능하다.
