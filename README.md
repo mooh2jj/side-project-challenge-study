@@ -44,3 +44,25 @@
  * 환경셋팅 - [https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00](https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00)
 </div>
 </details>
+
+<details>
+<summary>1week(2023/03/04)</summary>
+<div markdown="1">
+
+  * 각 개인 면담 진행 => 추후 각개인에 맞는 스터디 과제도 진행할 것
+  * 웹개발자가 보는 대표 server 4개 정리
+  * Liunx, DB서버, git의 존재 이유
+  * 간단한 Linux 명령어 정리
+  * 과제
+  ```
+1) git-flow 란 무엇인지 정리
+2) git 대표적 명령어 정리
+
+3) MySQL에서 DB 테이블 설계시 중요 요소 각 정리
+
+챌린지) 각 개별로 드립니다. 
+```
+* 1주차 정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
+</div>
+</details>
+
