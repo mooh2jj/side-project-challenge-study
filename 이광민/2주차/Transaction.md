@@ -12,9 +12,15 @@ transaction이 끝날 때 DB의 여러 제약 조건에 맞는 상태를 보장�
 transaction이 진행되는 중간 상태의 데이터를 다른 transaction이 볼 수 없도록 보장하는 성질이다. 송금하는 사람의 계좌에서 돈은 빠져나갔는데 받는 사람의 계좌에 돈이 아직 들어가지 않은 DB 상황을 다른 transaction이 읽으면 안 된다.
 ### Durability
 transaction이 성공했을 경우 해당 결과가 영구적으로 적용됨을 보장하는 성질이다. 한 번 송금이 성공하면 은행 시스템에 장애가 발생하더라도 송금이 성공한 상태로 복구할 수 있어야 한다.
-
 ## ACID 원칙은 완벽히 지켜지지 않는다 - Transaction의 Isolation Level
-
+ACID원칙을 strict하게 지키려면**동시성**이 떨어지기 때문에 ACID 원칙을 희생하여 동시성을 얻을 수 있는 방법은 Transaction의 Isolation Level이다.
+## InnoDB의 Lock
+### Row-level lock
+- Shared lock(S lock)
+  - read에 대한 lock으로 SELECT쿼리는 lock을 사용하지 않고 DB를 읽어 오지만 SELECT ... FOR SHARE 같은 일부 SELECT 쿼리는 READ 작업을 수행할 때 row에 S lcok을 건다.
+- Exclusive lock(X lock)
+  - write에 대한 lock으로 UPDATE, DELETE등의 수정 쿼리를 날릴 때 row에 걸리는 lock이다.
+### Isolation Level
 ### 동작 원리
 
 ### 사용 이유
