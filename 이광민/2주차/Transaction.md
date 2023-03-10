@@ -11,13 +11,60 @@ transaction이 진행되는 중간 상태의 데이터를 다른 transaction이 
 ### Durability
 transaction이 성공했을 경우 해당 결과가 영구적으로 적용됨을 보장하는 성질이다. 한 번 송금이 성공하면 은행 시스템에 장애가 발생하더라도 송금이 성공한 상태로 복구할 수 있어야 한다.
 ## ACID 원칙은 완벽히 지켜지지 않는다 - Transaction의 Isolation Level
-ACID원칙을 strict하게 지키려면**동시성**이 떨어지기 때문에 ACID 원칙을 희생하여 동시성을 얻을 수 있는 방법은 Transaction의 Isolation Level이다.
+ACID원칙을 엄격하게 지키려면**동시성**이 떨어지기 때문에 ACID 원칙을 희생하여 동시성을 얻을 수 있는 방법은 Transaction의 Isolation Level이다.
 ## InnoDB의 Lock
 ### Row-level lock
+테이블의 row마다 걸리는 lock이다.
 - Shared lock(S lock)
   - read에 대한 lock으로 SELECT쿼리는 lock을 사용하지 않고 DB를 읽어 오지만 SELECT ... FOR SHARE 같은 일부 SELECT 쿼리는 READ 작업을 수행할 때 row에 S lcok을 건다.
 - Exclusive lock(X lock)
   - write에 대한 lock으로 UPDATE, DELETE등의 수정 쿼리를 날릴 때 row에 걸리는 lock이다.
+- S lock과 X lock을 거는 규칙
+  - 여러 transaction이 동시에 S lock을 걸 수 있다.
+  - S lock이 걸린 row에 다른 transaction이 X lock을 걸 수 없다.
+  - X lock이 걸려 있는 row는 다른 transaction이 S lock, X lock을 걸 수 없다.
+### Record lock
+row가 아니라 DB의 index에 걸리는 lock이다.
+
+**Record lock** 예시
+
+c1이라는 columnn을 가진 테이블 t가 있을때 한 transaction에서
+```
+(Query 1 in transaction A)
+SELECT c1 FROM t WHERE c1 = 10 FOR UPDATE;
+```
+라는 쿼리를 실행시 t.c1의 값이 10인 index에 X lock이 걸린다. 이때 다른 transaction에서
+```
+(Query 2 in transaction B)
+DELETE FROM t WHERE c1 = 10;
+```
+라는 쿼리를 실행하려고 시도할 때 query 2는 t.c1 = 10인  index에 X lock을 걸려고 시도한다. 하지만 이미 query 1에서 X lock을 걸었기에  query 1이 commit되거나 rollback되기 전까지 해당 row를 삭제할 수 없고 insert, update도 불가능 하다.
+### Gap lock
+DB index record의 gap에 걸리는 lock이다. 여기서 gap이란 index 중 DB에 실제 record가 없는 부분이다.
+
+예시로 아래의 테이블을 보면 id = 3, 7인 row만 있다.
+```
+    Index table               Database
+-------------------          ---------
+| id  | row addr  |          |  id   |
+-------------------          ---------
+|  3  | addr to 3 |--------->|   3   |
+|  7  | addr to 7 |--------->|   7   |
+-------------------          ---------
+```
+그러면 현재 id <= 2, 4 <= id <= 6, 8 <= id에 해당하는 부분에는 index record가 없고 이 부분이 바로 index record의 gap이다.
+
+gap lock은 이런 gap에 걸리는 lock으로 해당 gap에 접근하는 다른 쿼리의 접근을 막는다. record lock의 경우는 이미 존재하는 row가 변경되지 않는 반면 gap lock은 조건에 해당하는 새로운 row가 추가되는 것을 방지한다.
+
+**Gap lock** 예시
+c1이라는 column하나가 있는 테이블 t에 c1=13, c1=17이라는 row가 있다. 이때 transaction에
+```
+(Query 1 in transaction A)
+`SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;`
+```
+라는 쿼리를 실행 시 t.c1의 값이 10과 20사이인 gap에 lock이 걸린다.
+### Lock이 해제되는 타이밍
+transaction이 진행되는 동안 InnoDB엔진은 수많은 lock을 DB에 걸게 되고 이러한 lock은 모두 transaction이 commit되거나 rollback될 때 함께 unlock된다.
 ### Isolation Level
 ### 동작 원리
 
