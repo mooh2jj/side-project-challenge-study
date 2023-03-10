@@ -65,7 +65,9 @@ c1이라는 column하나가 있는 테이블 t에 c1=13, c1=17이라는 row가 �
 라는 쿼리를 실행 시 t.c1의 값이 10과 20사이인 gap에 lock이 걸린다.
 ### Lock이 해제되는 타이밍
 transaction이 진행되는 동안 InnoDB엔진은 수많은 lock을 DB에 걸게 되고 이러한 lock은 모두 transaction이 commit되거나 rollback될 때 함께 unlock된다.
-### Isolation Level
+## Isolation Level
+### Consistent Read
+
 ### 동작 원리
 
 ### 사용 이유
