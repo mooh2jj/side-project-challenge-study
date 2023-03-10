@@ -38,8 +38,10 @@ AND column2 = 'value2'
 # 자료구조 관점에서 알아보자
 1. MySQL은 기본적으로 B-Tree를 사용한다. 이 구조는 이진트리와 비슷하지만 다르다.
 여기서 B는 바이너리가 아닌 Balance를 의미 
-![img.png](img.png)![img_1.png](img_1.png)
-![img_2.png](img_2.png)
+![image](https://user-images.githubusercontent.com/103854287/224346966-56f83908-2a6c-4f8e-858b-cc3d07791c85.png)
+![image](https://user-images.githubusercontent.com/103854287/224347012-9204d57e-0699-4cd3-abc5-83453274c628.png)
+![image](https://user-images.githubusercontent.com/103854287/224347038-400917cf-db3f-4572-bbaf-3a35c4f4f441.png)
+
 - B-Tree란
 바이너리 서치 트리에서 발전되어 모든 리프노드들이 같은 레벨을 가질 수 있도록 자동으로 균형을 맞추는 트리
 이진트리와 다르게 하나의 노드에 많은 트리를 가지고 있다.
@@ -59,4 +61,4 @@ AND column2 = 'value2'
 
 - 병합은 삭제 연산을 할 때 키 값이 저장된 노드가 리프 노드인 경우 해당 노드를 삭제하고
 - 리프 노드의 수를 줄인다. 이 때 인접한 노드를 합쳐서 하나의 노드로 만든다.
-![img_3.png](img_3.png)
+![image](https://user-images.githubusercontent.com/103854287/224347070-dcd2fa1e-8121-41dc-8d04-622d66da9a3c.png)
