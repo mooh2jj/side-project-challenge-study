@@ -67,3 +67,4 @@ git merge [branch_name]
 **Reference**</br>
 + https://velog.io/@sontulip/how-to-db-design
 + https://www.youtube.com/watch?v=JwfQ8ouhAzA&ab_channel=%EC%89%AC%EC%9A%B4%EC%BD%94%EB%93%9C
+
