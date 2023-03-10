@@ -62,11 +62,13 @@ c1이라는 column하나가 있는 테이블 t에 c1=13, c1=17이라는 row가 �
 (Query 1 in transaction A)
 `SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;`
 ```
-라는 쿼리를 실행 시 t.c1의 값이 10과 20사이인 gap에 lock이 걸린다.
+라는 쿼리를 실행 시 t.c1의 값이 10과 20사이인 gap에 lock이 걸리며 transaction이 commmit 되거나 rollback 될 때까지 삽입되지 않는다.
 ### Lock이 해제되는 타이밍
 transaction이 진행되는 동안 InnoDB엔진은 수많은 lock을 DB에 걸게 되고 이러한 lock은 모두 transaction이 commit되거나 rollback될 때 함께 unlock된다.
 ## Isolation Level
 ### Consistent Read
+read(SELECT)가 수행할 때 현재 DB의 값이 아니라 특정 시점의 DB **snapshot을 읽어오는 것이며 snapshot은 commit된 변화만이 적용된 상태를 의미**한다.
+
 
 ### 동작 원리
 
