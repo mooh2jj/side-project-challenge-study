@@ -74,11 +74,16 @@ read(SELECT)가 수행할 때 현재 DB의 값이 아니라 특정 시점의 DB 
 
 ### REPEATABLE READ
 
+트랜잭션이 읽은 로우를 다른 트랜잭션에서 수정되는 것을 막아준다. 하지만 새로운 로우를 추가하는 것은 제한하지 않는다.
+
 REPEATABLE READ는 반복해서 read operation을 수행하더라도 읽어 들이는 값이 변화하지 않는 정도의 isolation을 보장하는 level이다.
 
 REPEATABLE READ transaction은 처음으로 read(SELECT) operation을 수행한 시간을 기록한다. 그리고 그 이후에는 모든 read operation마다 해당 시점을 기준으로 consistent read를 수행한다. 그렇기 때문에 다른 transaction이 commit 되더라도 새로 commit된 데이터는 보이지 않는다. 첫 read시에 snapshot을 보기 때문이다.
 
-### READ COMMITTED
+### READ COMMITTED : Transaction의 기본 격리수
+
+트랜잭션이 커밋하지 않은 정보는 읽을 수 없다. 하지만 트랜잭션이 읽은 로우를 다른 트랜잭션에서 수정 할 수 있다
+그래서 트랜잭션이 같은 로우를 읽었어도 시간에 따라서 다른 내용이 발견될 수 있다.
 
 READ COMMITTED는 commit 된 데이터만 보이는 수준의 isolation을 보장하는 level이다.
 
@@ -122,6 +127,9 @@ PHANTOM READ란, SELECT ... FOR UPDATE 쿼리와 같은 쓰기 잠금을 거는 
 
 ### READ UNCOMMITTED
 
+가장 낮은 격리 수준이다.  트랜잭션이 커밋되기 전에 그 변화가 다른 트랜잭션에 그대로 노출된다.
+하지만 속도가 빠르기 떄문에 데이터의 일관성이 떨어지더라도, 성능 극대화를 위해 의도적으로 사용하기도 한다.
+
 READ UNCOMMITTED은 SELECT 쿼리를 실행할 때 아직 commit 되지 않은 데이터를 읽어올 수 있다.
 
 1. Transaction A에서 row를 삽입했다.
@@ -134,22 +142,22 @@ READ UNCOMMITTED은 SELECT 쿼리를 실행할 때 아직 commit 되지 않은 �
 
 ### SERIALIZABLE
 
+가장 강력한 트랜잭션 격리수준이다. 여러 트랜잭션이 동시에 같은 테이블 로우에 액세스하지 못하게 한다.
+가장 안전하지만 가장 성능이 떨어진다.
+
 SERIALIZABLE transaction은 기본적으로 REPEATABLE READ와 동일하다. 대신, SELECT 쿼리가 전부 SELECT ... FOR SHARE로 자동으로 변경되며 굉장히 쉽게 Deadlock에 걸릴 수 있다.
 
 ## Dirty Check
 ### Dirty Checking
 상태 변경 검사이며 transaction이 끝나는 시점에 변화가 있는 모든 엔티티 객체를 데이터 베이스에 자동 반영해줍니다.
-### 동작 원리
-
 ### 사용 이유
 ALL-OR-Nothing방식으로 DML명령어들을 처리한다.
+Dirty Check를 활용하여 update 쿼리를 작성하지 않아도 변화가 있는 모든 객체를 DB에 자동 반영해준다.
 ### Rollback
 작업 중 문제가 발생했을 때 트랜젝션의 처리 과정에서 발생한 사항을 취소하며 commit 시점 까지 복구 한다.
 ![image](https://user-images.githubusercontent.com/43610417/222895984-238b3519-0df7-4a25-b57b-11ff71cc0262.png)
 
 데이터 무결성이 보장된다. 정상 종료시 자동으로 commit이 되지만 비정상 종료시 자동으로 Rollback한다.
-### Proxy
-
 ### Reflection
 힙 영역에 로드된 Class타입의 객체(JVM의 클래스 로더에서 클래스 파일에 대한 로딩을 완료한 후 해당 클래스의 정보를 담은 Class타입의 객체)를 통해 
 
