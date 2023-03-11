@@ -106,6 +106,27 @@ Phantom read가 일어나는 상황을 자세히 알아보자. c1 column이 있�
 (A-2) SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
 (A-3) COMMIT;
 ```
+A-1 쿼리 실행시 t.c1 = 13, t.c1 = 17인 row에 EAD COMMITTED transaction은 record lock만을 걸기에 record lock이 걸린다.
+B-1 쿼리를 실행시에 t.c1 = 15인 row에 gap lock이 걸려 있지 않기에 t.c1인 row를 삽입하고 transaction B는 commit 한다.
+A-2 쿼리를 실행시 isolation level이 READ COMMITTED이기 때문에 새롭게 snapshot을 갱신하는데 이 과정에서 B-2 쿼리에서 실행한 t.c1 = 15인 row를 불러 들이기에 phantom row가 발생한다.
+
+phantom row를 해결하기 위해서는 transaction A의 isolation level을 REPEATABLE READ로 설정하여 t.c1 = 15에 gap lock을 걸어서 transaction B가 transaction A가 commit될 때 까지 기다리게 하여야 한다.
+
+### READ UNCOMMITTED
+
+READ UNCOMMITTED은 SELECT 쿼리를 실행할 때 아직 commit 되지 않은 데이터를 읽어올 수 있다.
+
+1. Transaction A에서 row를 삽입했다.
+2. READ UNCOMMITTED transaction B가 해당 row를 읽는다.
+3. Transaction A가 rollback 된다.
+
+라고 할 때 transaction B는 commit 되지 않은 데이터를 읽어 들였다 이것을 Dirty read라고 한다.
+
+이것이 가능한 이유는 InnoDB 엔진은 실행된 쿼리의 경우 모두 DB에 적용시키기 때문에 log를 보고 특정 시점의 snapshot을 복구하는 consistent read를 하지 않고 그냥 해당 시점의 DB를 읽으면 dirty read가 된다. 
+
+### SERIALIZABLE
+
+SERIALIZABLE transaction은 기본적으로 REPEATABLE READ와 동일하다. 대신, SELECT 쿼리가 전부 SELECT ... FOR SHARE로 자동으로 변경된다.
 
 
 ## Dirty Check
