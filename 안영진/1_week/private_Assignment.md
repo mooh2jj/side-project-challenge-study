@@ -14,6 +14,10 @@
 #### NOSQL 이란?
 > NoSQL이란(Not Only SQL)의 약자로 말 그대도 위에서 설명한 RDB 형태의 관계형 데이터베이스가 아닌 다른 형태의 데이터 저장 기술을 의미함. 또한 NoSQL에서는 RDBMS와는 달리 테이블 간 관계를 정의하지 않음. 데이터 테이블은 그냥 하나의 테이블이며 테이블 간의 관계를 정의하지 않아 일반적으로 테이블 간 Join도 불가능.
 
+#### RDBMS, NOSQL 장단점
+<img width="700" alt="스크린샷 2023-03-11 오후 3 18 51" src="https://user-images.githubusercontent.com/31895069/224469409-d9ee07e4-4d8e-41bc-b9e2-818d928bbb9a.png">
+
+
 
 ### Redis란?
 Redis(레디스)는 REmote DIctionary Server의 약자로 오픈소스(BSD licensed) DBMS입니다.
