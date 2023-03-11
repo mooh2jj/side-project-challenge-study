@@ -69,7 +69,9 @@ transaction이 진행되는 동안 InnoDB엔진은 수많은 lock을 DB에 걸�
 ### Consistent Read
 read(SELECT)가 수행할 때 현재 DB의 값이 아니라 특정 시점의 DB **snapshot을 읽어오는 것이며 snapshot은 commit된 변화만이 적용된 상태를 의미**한다.
 
-
+## Dirty Check
+### Dirty Checking
+상태 변경 검사이며 transaction이 끝나는 시점에 변화가 있는 모든 엔티티 객체를 데이터 베이스에 자동 반영해줍니다.
 ### 동작 원리
 
 ### 사용 이유
