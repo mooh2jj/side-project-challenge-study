@@ -112,6 +112,14 @@ A-2 쿼리를 실행시 isolation level이 READ COMMITTED이기 때문에 새롭
 
 phantom row를 해결하기 위해서는 transaction A의 isolation level을 REPEATABLE READ로 설정하여 t.c1 = 15에 gap lock을 걸어서 transaction B가 transaction A가 commit될 때 까지 기다리게 하여야 한다.
 
+### phantom read
+
+PHANTOM READ란, SELECT ... FOR UPDATE 쿼리와 같은 쓰기 잠금을 거는 경우 다른 트랜잭션에서 수행한 변경 작업에 의해 레코드가 보였다가 안 보였다가 하는 현상을 말한다.
+
+![image](https://user-images.githubusercontent.com/43610417/224460705-f4998e97-9ec3-457d-bdc5-77c38316b073.png)
+
+사용자 A가 INSERT를 실행하기 전과 후에 B가 조회했을 때 결과는 동일한 결과를 보여줘야 하지만 다른 결과를 보여주고 있다. 이것이 PHANTOM READ이며 이유는 SELECT ... FOR UPDATE 쿼리의 경우 SELECT하는 레코드에 쓰기 잠금을 걸어야 하지만 언두 영역(이전 데이터로 복구할 수 있도록 로깅해놓은 영)에 잠금을 걸 수 없기 때문이다.
+
 ### READ UNCOMMITTED
 
 READ UNCOMMITTED은 SELECT 쿼리를 실행할 때 아직 commit 되지 않은 데이터를 읽어올 수 있다.
@@ -126,8 +134,7 @@ READ UNCOMMITTED은 SELECT 쿼리를 실행할 때 아직 commit 되지 않은 �
 
 ### SERIALIZABLE
 
-SERIALIZABLE transaction은 기본적으로 REPEATABLE READ와 동일하다. 대신, SELECT 쿼리가 전부 SELECT ... FOR SHARE로 자동으로 변경된다.
-
+SERIALIZABLE transaction은 기본적으로 REPEATABLE READ와 동일하다. 대신, SELECT 쿼리가 전부 SELECT ... FOR SHARE로 자동으로 변경되며 굉장히 쉽게 Deadlock에 걸릴 수 있다.
 
 ## Dirty Check
 ### Dirty Checking
@@ -136,7 +143,6 @@ SERIALIZABLE transaction은 기본적으로 REPEATABLE READ와 동일하다. 대
 
 ### 사용 이유
 ALL-OR-Nothing방식으로 DML명령어들을 처리한다.
-### Layor 계층에 따른 범위
 ### Rollback
 작업 중 문제가 발생했을 때 트랜젝션의 처리 과정에서 발생한 사항을 취소하며 commit 시점 까지 복구 한다.
 ![image](https://user-images.githubusercontent.com/43610417/222895984-238b3519-0df7-4a25-b57b-11ff71cc0262.png)
@@ -146,3 +152,7 @@ ALL-OR-Nothing방식으로 DML명령어들을 처리한다.
 
 ### Reflection
 힙 영역에 로드된 Class타입의 객체(JVM의 클래스 로더에서 클래스 파일에 대한 로딩을 완료한 후 해당 클래스의 정보를 담은 Class타입의 객체)를 통해 
+
+REDO VS UNDO : https://velog.io/@pk3669/Mysql-Redo-Undo-Log
+Phantom read : https://steady-coding.tistory.com/562
+Transaction : https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/
