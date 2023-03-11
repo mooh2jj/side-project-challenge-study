@@ -66,3 +66,23 @@
 </div>
 </details>
 
+<details>
+<summary>2week(2023/03/11)</summary>
+<div markdown="1">
+
+  * 복습 linux 쉘 스크립트 대표적인 예, gradle
+  * git flow 정리, git 명렁어 정리
+  * 스터디원 발표 진행
+  * 취업/이직 상황 공유, MySQL 정리 
+  * 과제
+  ```
+1) 이론 책 3권 선정
+2) 책 1권 읽고 블로그에 북리뷰 남기기
+3) 북리뷰 방식은 "가장 인상깊은 구절" & "인상깊은 기술적 인사이트"로 정리
+
+챌린지) 각 개별로 드립니다. 
+```
+* 2주차 정리 - https://www.notion.so/2week-9fd123cd225f4755a70019061d210a05
+</div>
+</details>
+
