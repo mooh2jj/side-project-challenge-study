@@ -1,7 +1,7 @@
 
-
+## 챌린지
 <details>
-<summary>1 주차</summary>
+<summary>OT</summary>
 <div>
 
 ### 1) 사용 툴 설치 및 이해하기
@@ -60,3 +60,13 @@
 
 </div>
 </details>
+
+<details>
+<summary>1주차</summary>
+<div>
+
+### 챌린지) </br>학교 전공자로 지금까지 개발관련 배운 과목 커리큘럼을 가지고 마인드맵 만들어서 압축적으로 설명하기
+<img src="https://user-images.githubusercontent.com/77001047/224380241-58d0f664-c3d9-4f40-8476-86952f8e0b65.png" width="700"/>
+</div>
+</details>
+
