@@ -162,5 +162,7 @@ Dirty Check를 활용하여 update 쿼리를 작성하지 않아도 변화가 �
 힙 영역에 로드된 Class타입의 객체(JVM의 클래스 로더에서 클래스 파일에 대한 로딩을 완료한 후 해당 클래스의 정보를 담은 Class타입의 객체)를 통해 
 
 REDO VS UNDO : https://velog.io/@pk3669/Mysql-Redo-Undo-Log
+
 Phantom read : https://steady-coding.tistory.com/562
+
 Transaction : https://suhwan.dev/2019/06/09/transaction-isolation-level-and-lock/
