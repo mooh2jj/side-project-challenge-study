@@ -15,8 +15,15 @@
 > NoSQL이란(Not Only SQL)의 약자로 말 그대도 위에서 설명한 RDB 형태의 관계형 데이터베이스가 아닌 다른 형태의 데이터 저장 기술을 의미함. 또한 NoSQL에서는 RDBMS와는 달리 테이블 간 관계를 정의하지 않음. 데이터 테이블은 그냥 하나의 테이블이며 테이블 간의 관계를 정의하지 않아 일반적으로 테이블 간 Join도 불가능.
 
 
-### REDIS 설치ㄹ
-#### 공식 사이트에서 install파일 다운로드 받아 설치
+### Redis란?
+Redis(레디스)는 REmote DIctionary Server의 약자로 오픈소스(BSD licensed) DBMS입니다.
+
+In-memory(인메모리) 데이터 저장소이며, Key-Value기반의 NoSQL DBMS입니다.
+
+보통 DB, Cache(캐시), 메시지 브로커 등의 용도로 사용합니다.
+
+### REDIS 설치
+#### 공식 사이트에서 install 파일 다운로드 받아 설치
 
 #### docker pull 받아서 설치
 
