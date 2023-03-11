@@ -67,7 +67,46 @@ c1이라는 column하나가 있는 테이블 t에 c1=13, c1=17이라는 row가 �
 transaction이 진행되는 동안 InnoDB엔진은 수많은 lock을 DB에 걸게 되고 이러한 lock은 모두 transaction이 commit되거나 rollback될 때 함께 unlock된다.
 ## Isolation Level
 ### Consistent Read
+
 read(SELECT)가 수행할 때 현재 DB의 값이 아니라 특정 시점의 DB **snapshot을 읽어오는 것이며 snapshot은 commit된 변화만이 적용된 상태를 의미**한다.
+
+ InnoDB 엔진은 각 쿼리를 실행할 때마다 실행한 쿼리의 log를 차곡차곡 저장한다. 그리고 나중에 consistent read를 할 때 이 log를 통해 특정 시점의 DB snapshot을 복구하여 가져온다.
+
+### REPEATABLE READ
+
+REPEATABLE READ는 반복해서 read operation을 수행하더라도 읽어 들이는 값이 변화하지 않는 정도의 isolation을 보장하는 level이다.
+
+REPEATABLE READ transaction은 처음으로 read(SELECT) operation을 수행한 시간을 기록한다. 그리고 그 이후에는 모든 read operation마다 해당 시점을 기준으로 consistent read를 수행한다. 그렇기 때문에 다른 transaction이 commit 되더라도 새로 commit된 데이터는 보이지 않는다. 첫 read시에 snapshot을 보기 때문이다.
+
+### READ COMMITTED
+
+READ COMMITTED는 commit 된 데이터만 보이는 수준의 isolation을 보장하는 level이다.
+
+REPEATABLE READ transaction이 첫 read operation을 기준으로 consistent read를 수행하는 반면, **READ COMMITTED transaction은 read operation 마다 DB snapshot을 다시 뜬다.** 그렇기 때문에 다른 transaction이 commit 한 다음에 다시 read operation을 수행하면, REPEATABLE READ와는 다르게 READ COMMITTED transaction은 해당 변화를 볼 수 있다.
+
+### REPEATABLE READ vs READ COMMITTED
+
+Phantom read가 일어나는 상황을 자세히 알아보자. c1 column이 있는 table t가 있다. 현재 t에는 t.c1 = 13인 row와 t.c1 = 17인 row가 존재한다. 여기서 READ COMMITTED transaction A와 transaction B가 아래와 같이 쿼리를 실행하려고 한다.
+```
+(Transaction A - READ COMMITTEED)
+(1) SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
+(2) SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
+(3) COMMIT;
+```
+```
+(Transaction B - READ COMMITTED)
+(1) INSERT INTO t VALUES(15);
+(2) COMMIT;
+```
+두 transaction이 다음과 같은 순서로 실행되었다고 해보자.
+```
+(A-1) SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
+(B-1) INSERT INTO t VALUES(15);
+(B-2) COMMIT;
+(A-2) SELECT c1 FROM t WHERE c1 BETWEEN 10 and 20 FOR UPDATE;
+(A-3) COMMIT;
+```
+
 
 ## Dirty Check
 ### Dirty Checking
