@@ -3,6 +3,25 @@
 ```
 SELECT 열1, 열2 FROM TABLE;
 ```
+### LIKE
+- 특정 문자가 포함 된 경우 찾기 LIKE 앞에 not을 붙혀주면 반대의 의미가 된다.
+```
+특정 문자로 시작하는 데이터 검색
+
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '특정 문자열%';
+
+특정 문자로 끝나는 데이터 검색
+
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열';
+
+특정 문자를 포함하는  데이터  검색
+
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열%';
+
+복수개의 특정 문자를 포함하는 데이터를 검색하기 위해서 OR연산자를 사용해야한다.
+
+SELECT [필드명] FROM [테이블명] WHERE [필드명] LIKE '%특정 문자열%' OR [필드명] LIKE '%특정 문자열2%';
+```
 ### WHERE
 - 조건식에 사용
 ```
@@ -110,6 +129,15 @@ IFNULL(expr1, expr2) : expr1이 NULL이면 expr2를 리턴하고, NULL이 아니
 - 해당 DATA를 원하는 출력 값에 맞게 출력 가능하다.
 ```
 date_format(HIRE_YMD, '%Y-%m-%d')
+
+YEAR('2011-00-09 07:18:59')
+2011 출력
+
+MONTH('2011-00-09 07:18:59')
+00 출력
+
+DATE('2011-10-09 07:18:59')
+2011-10-09 출
 
 FORMAT	변환 결과
 %M	월(Janeary, December, ...)
