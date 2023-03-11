@@ -158,6 +158,9 @@ Dirty Check를 활용하여 update 쿼리를 작성하지 않아도 변화가 �
 ![image](https://user-images.githubusercontent.com/43610417/222895984-238b3519-0df7-4a25-b57b-11ff71cc0262.png)
 
 데이터 무결성이 보장된다. 정상 종료시 자동으로 commit이 되지만 비정상 종료시 자동으로 Rollback한다.
+
+DDL문(CREATE, DROP, ALTER, RENAME, TRUNCATE)은 transaction의 rollback 대상이 아니다.
+
 ### Reflection
 힙 영역에 로드된 Class타입의 객체(JVM의 클래스 로더에서 클래스 파일에 대한 로딩을 완료한 후 해당 클래스의 정보를 담은 Class타입의 객체)를 통해 
 
