@@ -86,3 +86,26 @@
 </div>
 </details>
 
+<details>
+<summary>3week(2023/03/18)</summary>
+<div markdown="1">
+
+  * 블로그의 중요성
+  * 책 5권 선정 이유(서판설명)
+  * 스터디원 읽은 책 발표
+    * 그림으로 배우는 HTTP & Network Basic -> Https
+    * 면접을 위한 CS 전공지식 노트 -> OSI 7계층
+    * 클린코드 
+    * 객체지향의 사실과 오해
+    
+  * 과제
+  ```
+1) 이론 책 3권 선정
+2) 책 1권 읽고 블로그에 북리뷰 남기기
+3) 북리뷰 방식은 "가장 인상깊은 구절" & "인상깊은 기술적 인사이트"로 정리
+```
+* 3주차 정리 - https://www.notion.so/3week-9a782c2a3f7b48a584077d0f89d5c558
+</div>
+</details>
+
+
