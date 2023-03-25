@@ -108,4 +108,22 @@
 </div>
 </details>
 
+<details>
+<summary>4week(2023/03/25)</summary>
+<div markdown="1">
 
+  * 책 & 블로그의 중요성
+  * 사이드프로젝트 내용 소개
+    
+  * 과제
+```
+CRUD <= 도메인 coupon
+C: 쿠폰 등록
+R: 쿠폰 조회
+U: 쿠폰 수정
+D: 쿠폰 삭제
+```
+
+* 4주차 정리 - https://www.notion.so/4week-d7439507b5b147fc927e5c144bf46bfc
+</div>
+</details>
