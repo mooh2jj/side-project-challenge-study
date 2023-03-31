@@ -15,8 +15,15 @@ import java.util.Optional;
 public class CouponService {
     private final CouponRepository couponRepository;
     @Transactional(readOnly = true)
-    public List<Coupon> couponResponseDtoList(String codeType){
+    public List<Coupon> findCouponsByCodeType(String codeType){
+        if (couponRepository.findAllByCodeType(codeType).isEmpty()){
+            throw new RuntimeException("존재하지 않는 쿠폰입니다.");
+        }
         return couponRepository.findAllByCodeType(codeType);
+    }
+    @Transactional(readOnly = true)
+    public List<Coupon> readAllCoupon(){
+        return couponRepository.findAll();
     }
     @Transactional
     public ResponseEntity<Long> createCoupon(Long id, CouponRequestDto requestDto) {
