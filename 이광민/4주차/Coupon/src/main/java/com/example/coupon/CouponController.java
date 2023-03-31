@@ -5,16 +5,19 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
 public class CouponController {
     private final CouponService couponService;
+    @GetMapping("/coupon/{codeType}")
+    public List<Coupon> couponResponseDtoList(@PathVariable String codeType){
+        return couponService.findCouponsByCodeType(codeType);
+    }
     @GetMapping("/coupon")
-    public List<Coupon> couponResponseDtoList(@RequestParam String codeType){
-        return couponService.couponResponseDtoList(codeType);
+    public List<Coupon> readAllCoupon(){
+        return couponService.readAllCoupon();
     }
     @PostMapping("/coupon/{id}")
     public ResponseEntity<Long> createCoupon(@PathVariable Long id, @RequestBody CouponRequestDto requestDto){
