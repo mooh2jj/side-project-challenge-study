@@ -131,3 +131,25 @@ D: 쿠폰 삭제
 * 4주차 정리 - https://www.notion.so/4week-d7439507b5b147fc927e5c144bf46bfc
 </div>
 </details>
+
+<details>
+<summary>5week(2023/04/01)</summary>
+<div markdown="1">
+
+  * 사이드프로젝트 내용 본격적 설명
+  * 코드리뷰 (coupon 과제)
+  * 팀 선정  
+  
+  * 과제
+```
+- ERD
+- API 명세서 (Notion)
+- 페이징
+- querydsl 동적쿼리 → coupon 조건 대체
+- 다음 JWT 기술 대비, Spring Security 조사
+```
+
+* 5주차 정리 - https://www.notion.so/5week-fe0acbacf641432ab0accf0d4cfa457b
+</div>
+</details>
+
