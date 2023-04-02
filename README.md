@@ -142,7 +142,7 @@ D: 쿠폰 삭제
   
   * 과제
 ```
-- ERD
+- ERD (coupon, coupon_record 추가)
 - API 명세서 (Notion)
 - 페이징
 - querydsl 동적쿼리 → coupon 조건 대체
