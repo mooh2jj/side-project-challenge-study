@@ -153,3 +153,22 @@ D: 쿠폰 삭제
 </div>
 </details>
 
+<details>
+<summary>6week(2023/04/08)</summary>
+<div markdown="1">
+
+  * 코드리뷰 (ERD, API 명세서, 도메인 코드 설명)
+  * JPA 정리
+  * 각 팀 토의시간
+  
+  * 과제
+```
+- Security, JWT 조사
+- JWT로 회원가입, 로그인 처리
+- ADMIN, USER Role 권한에 따라, api 기능 접근제한
+- chellange❗Oauth2 인증 처리 추가하기
+```
+
+* 6주차 정리 - https://www.notion.so/6week-4f751a5f855242a0b33a3350aff765cc
+</div>
+</details>
