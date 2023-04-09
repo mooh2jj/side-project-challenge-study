@@ -164,7 +164,7 @@ D: 쿠폰 삭제
   * 과제
 ```
 - 페이징 ResponseDto로 page, size, totalCount, prev, next 값 반환케 함,
-* prev, next는 페이징 내 "<<" ">>" 를 말함.
+  * prev, next는 페이징 내 "<<" ">>" 를 말함.
 - Security, JWT 조사
 - JWT로 회원가입, 로그인 처리
 - ADMIN, USER Role 권한에 따라, api 기능 접근제한
