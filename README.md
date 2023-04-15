@@ -186,7 +186,9 @@ D: 쿠폰 삭제
   
   * 과제
 ```
-보류
+- JUinit5 테스트코드 최소 자기가 맡은 한 도메인의 단위테스트(ServiceTest, EntityTest) 작성하기 
+- ERD 설계한 도메인 각 기능 구현
+- 프로젝트 산출물 완성하기(ERD, api 명세서, README.md 내 이슈해결 정리 등) 
 ```
 
 * 7주차 정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533
