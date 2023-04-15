@@ -150,6 +150,7 @@ D: 쿠폰 삭제
 ```
 
 * 5주차 정리 - https://www.notion.so/5week-fe0acbacf641432ab0accf0d4cfa457b
+
 </div>
 </details>
 
@@ -172,5 +173,22 @@ D: 쿠폰 삭제
 ```
 
 * 6주차 정리 - https://www.notion.so/6week-4f751a5f855242a0b33a3350aff765cc
+</div>
+</details>
+
+<details>
+<summary>7week(2023/04/15)</summary>
+<div markdown="1">
+
+  * 코드리뷰(페이징, 프로젝트 진행 상황 공유, Security JWT 학습 발표)
+  * Session과의 차이로 JWT 이해 
+  * JWT 사용하는 이유, Security 내 3가지 기술 단계
+  
+  * 과제
+```
+보류
+```
+
+* 7주차 정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533
 </div>
 </details>
