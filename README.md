@@ -186,7 +186,7 @@ D: 쿠폰 삭제
   
   * 과제
 ```
-- JUinit5 테스트코드 최소 자기가 맡은 1개의 도메인 단위테스트(ServiceTest or EntityTest) 작성하기 
+- JUinit5 테스트코드 최소 자기가 맡은 1개의 도메인 단위테스트(ServiceTest, EntityTest) 작성하기 
 - ERD 설계한 도메인 각 기능 구현
 - 프로젝트 산출물 완성하기(ERD, api 명세서, README.md 내 이슈해결 정리 등) 
 ```
