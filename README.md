@@ -194,3 +194,27 @@ D: 쿠폰 삭제
 * 7주차 정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533
 </div>
 </details>
+
+<details>
+<summary>8week(2023/04/21)</summary>
+<div markdown="1">
+
+  * 코드리뷰(각 맡은 도메인 Junit5 유닛테스트 진행)
+  * Junit5 검증 & 리팩토링 외 현실적 검증 방식들 
+  * Swagger 문서로 백앤드 코드 로 api 문서 연동
+  * 개발자 마음가짐 3가지 키워드(비즈니스, 투자, 실험)
+  
+  * 과제
+```
+- 지금까지 공부한 내용들 블로그로 정리
+- 향후 챌린지 과제
+ 1) AWS S3 이미지 파일 업로드/다운로드
+ 2) AWS RDS Redplica 조회/그외DML 분리, 조회성능개선하기
+ 3) logging 처리 -> logback 프레임워크 사용, ELK 프레임워크로 모니터링 운영서버 사용하기
+** 최소 1)은 진행하길 바라고, 나머지는 향후에 진행해도(취업한 이후) 전형 문제없음!!!
+
+```
+
+* 8주차 정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a
+</div>
+</details>
