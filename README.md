@@ -62,7 +62,6 @@
 
 챌린지) 각 개별로 드립니다. 
 ```
-* 1주차 정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
 </div>
 </details>
 
@@ -82,7 +81,6 @@
 
 챌린지) 각 개별로 드립니다. 
 ```
-* 2주차 정리 - https://www.notion.so/2week-9fd123cd225f4755a70019061d210a05
 </div>
 </details>
 
@@ -104,7 +102,6 @@
 2) 책 1권 읽고 블로그에 북리뷰 남기기
 3) 북리뷰 방식은 "가장 인상깊은 구절" & "인상깊은 기술적 인사이트"로 정리
 ```
-* 3주차 정리 - https://www.notion.so/3week-9a782c2a3f7b48a584077d0f89d5c558
 </div>
 </details>
 
@@ -128,7 +125,6 @@ D: 쿠폰 삭제
           요구사항에 맞는 응답값을 나오게 해주세요!
 ```
 
-* 4주차 정리 - https://www.notion.so/4week-d7439507b5b147fc927e5c144bf46bfc
 </div>
 </details>
 
@@ -148,8 +144,6 @@ D: 쿠폰 삭제
 - querydsl 동적쿼리 → coupon 조건 대체
 - 다음 JWT 기술 대비, Spring Security 조사
 ```
-
-* 5주차 정리 - https://www.notion.so/5week-fe0acbacf641432ab0accf0d4cfa457b
 
 </div>
 </details>
@@ -171,8 +165,6 @@ D: 쿠폰 삭제
 - ADMIN, USER Role 권한에 따라, api 기능 접근제한
 - chellange❗Oauth2 인증 처리 추가하기
 ```
-
-* 6주차 정리 - https://www.notion.so/6week-4f751a5f855242a0b33a3350aff765cc
 </div>
 </details>
 
@@ -190,8 +182,6 @@ D: 쿠폰 삭제
 - ERD 설계한 도메인 각 기능 구현
 - 프로젝트 산출물 완성하기(ERD, api 명세서, README.md 내 이슈해결 정리 등) 
 ```
-
-* 7주차 정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533
 </div>
 </details>
 
@@ -215,8 +205,6 @@ D: 쿠폰 삭제
 ** 최소 1)은 진행하길 바라며, 나머지는 향후에 진행해도(취업한 이후) 전혀 문제없습니다.
 
 ```
-
-* 8주차 정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a
 </div>
 </details>
 
