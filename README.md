@@ -24,9 +24,8 @@
   * 실습 - REST API 문자열 반환 테스트
   * 과제
   ```
- 
   1) 해당 레포지토리 fork & PR 해보기
-
+  
   2) Centos vs Ubuntu 차이 
   3) Shell script란?
   4) MySQL5.7 vs MySQL8.0 차이
