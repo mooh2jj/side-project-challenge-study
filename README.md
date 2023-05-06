@@ -37,6 +37,8 @@
 
  * 노션정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
 
+</div>
+</details>
 
 <br>
 
