@@ -8,7 +8,7 @@
 
 2. 발표시 CodeReview인 점을 감안하여 `Code 내용을 중심으로 발표`를 권장합니다. (자유발표도 가능, 발표는 하고싶은 분을 1순위, 없다면 당일날 랜덤으로 정해집니다)
 3. 나머지 스터디원들도 매주 해당 내용 숙지를 위해 스터디한 내용 학습, 학습한 내용을 `해당 본인이름의 디렉토리`에 `PR`하여 정리합니다. 
-4. 보증금은 `2만원이며 1번 불참시 이유불문하고 5천원 차감`됩니다, 스터디룸비용을 제하고 `계속 합류한 분들에게만` 지급됩니다.
+4. 스터디 룸 비용은 `1.3만원이며 과제(퀄리티, 완성도는 무관) 80%, 출석 3번 이상`이면 환급이 가능합니다!
 
 
 <br>
@@ -16,195 +16,27 @@
 # 📅 스터디 일정
 
 <details>
-<summary>OT(2023/02/25)</summary>
+<summary>1week(2023/05/06)</summary>
 <div markdown="1">
 
   * 자기소개 시간
   * 스터디 취지, 방향, 구성 방식 설명
+  * 실습 - REST API 문자열 반환 테스트
   * 과제
   ```
-  1) 사용 툴 설치 및 이해하기 
-   * IntelliJ(얼티메이트 버전 추천-플러그인 사용 가능)
-   * MySQL, DB 접속 HediSQL or Dbeaver
-   * e2e 테스트용 postman
-   * git/github bash, zsh 설치
-   * putty or MobaXterm 설치
- 
-  2) 해당 레포지토리 fork & PR 해보기
- 
-  3) Linux Setting 환경 -> window 사용자는 wsl2 설치, mac 사용자는 homebrew&iterm2 설치
+  1) 해당 레포지토리 fork & PR 해보기
   
-  4) Linux 명령어 + MySQL SQL 학습
-
-  챌린지) 
-  1) Centos vs Ubuntu 차이 
-  2) 쉡 스크립트란?
-  3) MySQL5.7 vs MySQL8.0 차이
+  2) Centos vs Ubuntu 차이 
+  3) Shell script란?
+  4) MySQL5.7 vs MySQL8.0 차이
+  5) git-flow 란 무엇인지 정리
+  6) git 대표적 명령어 정리
+  7) MySQL에서 DB 테이블 설계시 중요 요소 각 정리
   ```
  * 환경셋팅 - [https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00](https://www.notion.so/bb4d80cb1a094696b8ff27f4cd52bb00)
-</div>
-</details>
 
-<details>
-<summary>1week(2023/03/04)</summary>
-<div markdown="1">
+ * 노션정리 - https://www.notion.so/1week-c05cb87044784e7a847c3680b568c99e
 
-  * 각 개인 면담 진행 => 추후 각개인에 맞는 스터디 과제도 진행할 것
-  * 웹개발자가 보는 대표 server 4개 정리
-  * Liunx, DB서버, git의 존재 이유
-  * 간단한 Linux 명령어 정리
-  * 과제
-  ```
-1) git-flow 란 무엇인지 정리
-2) git 대표적 명령어 정리
-
-3) MySQL에서 DB 테이블 설계시 중요 요소 각 정리
-
-챌린지) 각 개별로 드립니다. 
-```
-</div>
-</details>
-
-<details>
-<summary>2week(2023/03/11)</summary>
-<div markdown="1">
-
-  * 복습 linux 쉘 스크립트 대표적인 예, gradle
-  * git flow 정리, git 명렁어 정리
-  * 스터디원 발표 진행
-  * 취업/이직 상황 공유, MySQL 정리 
-  * 과제
-  ```
-1) 이론 책 3권 선정
-2) 책 1권 읽고 블로그에 북리뷰 남기기
-3) 북리뷰 방식은 "가장 인상깊은 구절" & "인상깊은 기술적 인사이트"로 정리
-
-챌린지) 각 개별로 드립니다. 
-```
-</div>
-</details>
-
-<details>
-<summary>3week(2023/03/18)</summary>
-<div markdown="1">
-
-  * 블로그의 중요성
-  * 책 5권 선정 이유(서판설명)
-  * 스터디원 읽은 책 발표
-    * 그림으로 배우는 HTTP & Network Basic -> Https
-    * 면접을 위한 CS 전공지식 노트 -> OSI 7계층
-    * 클린코드 
-    * 객체지향의 사실과 오해
-    
-  * 과제
-  ```
-1) 이론 책 3권 선정
-2) 책 1권 읽고 블로그에 북리뷰 남기기
-3) 북리뷰 방식은 "가장 인상깊은 구절" & "인상깊은 기술적 인사이트"로 정리
-```
-</div>
-</details>
-
-<details>
-<summary>4week(2023/03/25)</summary>
-<div markdown="1">
-
-  * 책 아웃풋 발표
-  * 사이드프로젝트 내용 소개
-    
-  * 과제
-```
-CRUD <= 도메인 coupon
-C: 쿠폰 등록
-R: 쿠폰 조회 (전체조회(검색조건)/상세조회)
-U: 쿠폰 수정
-D: 쿠폰 삭제
-
-* 기술 스택 : postman + java11+ springboot2.6(gradle7.x) + JPA + MySQL8.x            
-* 추가 요구사항 - 검색조건시, 쿠폰코드가 한글이 포함되는지를 찾아야 한다. 파라미터 codeType = "kor" 입력시, 
-          요구사항에 맞는 응답값을 나오게 해주세요!
-```
-
-</div>
-</details>
-
-<details>
-<summary>5week(2023/04/01)</summary>
-<div markdown="1">
-
-  * 사이드프로젝트 내용 본격적 설명
-  * 코드리뷰 (coupon 과제)
-  * 팀 선정  
-  
-  * 과제
-```
-- ERD (coupon, coupon_record 추가)
-- API 명세서 (Notion)
-- 페이징
-- querydsl 동적쿼리 → coupon 조건 대체
-- 다음 JWT 기술 대비, Spring Security 조사
-```
-
-</div>
-</details>
-
-<details>
-<summary>6week(2023/04/08)</summary>
-<div markdown="1">
-
-  * 코드리뷰 (ERD, API 명세서, 도메인 코드 설명)
-  * JPA 정리
-  * 각 팀 토의시간
-  
-  * 과제
-```
-- 페이징 ResponseDto로 page, size, totalCount, prev, next 값 반환케 함,
-  * prev, next는 페이징 내 "<<" ">>" 를 말함.
-- Security, JWT 조사
-- JWT로 회원가입, 로그인 처리
-- ADMIN, USER Role 권한에 따라, api 기능 접근제한
-- chellange❗Oauth2 인증 처리 추가하기
-```
-</div>
-</details>
-
-<details>
-<summary>7week(2023/04/15)</summary>
-<div markdown="1">
-
-  * 코드리뷰(페이징, 프로젝트 진행 상황 공유, Security JWT 학습 발표)
-  * Session과의 차이로 JWT 이해 
-  * JWT 사용하는 이유, Security 내 3가지 기술 단계
-  
-  * 과제
-```
-- JUinit5 테스트코드 최소 자기가 맡은 1개의 도메인 단위테스트(ServiceTest, EntityTest) 작성하기 
-- ERD 설계한 도메인 각 기능 구현
-- 프로젝트 산출물 완성하기(ERD, api 명세서, README.md 내 이슈해결 정리 등) 
-```
-</div>
-</details>
-
-<details>
-<summary>8week(2023/04/21)</summary>
-<div markdown="1">
-
-  * 코드리뷰(각 맡은 도메인 Junit5 유닛테스트 진행)
-  * Junit5 검증 & 리팩토링 외 현실적 검증 방식들 
-  * Swagger 문서로 백앤드 코드 로 api 문서 연동
-  * 개발자 마음가짐 3가지 키워드(비즈니스, 투자, 실험)
-  
-  * 과제
-```
-- 지금까지 공부한 내용들 블로그로 정리
-- 향후 chellange❗ 
- 1) AWS S3 이미지 파일 업로드/다운로드
- 2) AWS RDS Redplica 조회/그외DML 분리, 조회성능개선하기
- 3) logging 처리 -> logback 프레임워크 사용, ELK 프레임워크로 모니터링 운영서버 사용하기
- 
-** 최소 1)은 진행하길 바라며, 나머지는 향후에 진행해도(취업한 이후) 전혀 문제없습니다.
-
-```
 </div>
 </details>
 
@@ -215,4 +47,3 @@ D: 쿠폰 삭제
 1. 발표 내용에 대한 리뷰, 질문이 너무 날카로워 해당 발표자에 대한 강한 감정적인 언행은 주의해주세요 😫!
 2. 질문을 받은 발표자도 Code 또는 발표내용 등을 자신과 동일시하여 지적한 것에 대해 너무 불쾌히 여기지 말으셨으면 좋겠습니다 😂!
 3. 리뷰, 피드백의 핵심은 `문제점들을 찾고 발전하는 것`이라는 걸 잊지 말아주세요!
-4. 보증금은 `최소 3번`은 스터디에 합류한 분들에게만 지급된다는 점 잊지 말아주세요!
