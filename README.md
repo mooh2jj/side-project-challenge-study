@@ -40,6 +40,25 @@
 </div>
 </details>
 
+<details>
+<summary>2week(2023/05/14)</summary>
+<div markdown="1">
+
+  * 1:1 개인 면담 - 스터디원 needs 체크
+  * git 명령어 + mysql 정리 + linux 실습
+  * 실습 - REST API 문자열 반환 get api -> gradle build -> jar (로컬) + aws ec2 서버 deploy
+  * 과제
+  ```
+  1) 실습 rest api 프로젝트 git 연동 -> aws ec2 서버 deploy (jar 실행)
+  2) shell script 로 aws ec2 서버 deploy (jar 실행) 자동배포 
+  3) mysql 명령어 연습 - 프로그래머스 SQL 코딩테스트 기출문제 Lv1~Lv4 20문제 풀기 (join, groupBy는 꼭 연습!)
+  4) 책 최소 3권 정하기 -> 다음 주 1권 채택 블로그 정리 발표 준비!
+  ```
+ * 노션정리 - https://www.notion.so/2week-9fd123cd225f4755a70019061d210a05
+
+</div>
+</details>
+
 <br>
 
 # 🎃 주의사항
