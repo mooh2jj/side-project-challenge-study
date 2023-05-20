@@ -59,6 +59,25 @@
 </div>
 </details>
 
+<details>
+<summary>3week(2023/05/22)</summary>
+<div markdown="1">
+
+  * 책 - <객.사.오> 리뷰
+  * 실습 - SOLID 원칙에 기반한 프로그래밍 리팩토링 - orderDish
+  * 실습 - tag, board 사이에 중간매핑테이블을 활용하여 tag 리스트가 있는 board 상세 조회 api
+  * 미션
+  ```
+  1) 책 블로그 발표 준비
+  2) JPA Entity 연관관계 매핑 연습
+  2) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
+  ```
+ * 노션정리 - https://rain-tank-b79.notion.site/3week-9a782c2a3f7b48a584077d0f89d5c558
+
+</div>
+</details>
+
+
 <br>
 
 # 🎃 주의사항
