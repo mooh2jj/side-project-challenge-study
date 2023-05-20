@@ -5,7 +5,7 @@
   * 데이터베이스 개체에 대한 모든 정보를 저장하는 테이블이다. 
 * 사전 데이터가 메타데이터 파일과 비트랜잭션 시스템 테이블에 저장되었던 5.7버전과 달리 8.0버전은 데이터 사전을 통합하여 데이터베이스 개체에 대한 정보를 포함한다.
 
-### 기본 인증 플러그인으로 caching_sha2_password
+### 기본 인증 플러그인이 caching_sha2_password으로 변경
 * mysql_native_password에서 caching_sha2_password로 변경되었다.
 * caching_sha2_password을 사용하려면
   * SSL 보안연결을 사용거나
