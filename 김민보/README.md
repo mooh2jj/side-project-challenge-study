@@ -20,3 +20,12 @@
 <br> 1. REST API 프로젝트 git연동 -> AWS EC2 deploy (jar실행) -> https://velog.io/@minbo2002/deploy-jarFile-to-EC2
 <br> 2. Shell Script로 AWS EC2 deploy (jar실행) 자동배포 -> https://velog.io/@minbo2002/deploy-jarFile-to-EC2
 <br> 3. MySQL 명령어 연습 - 프로그래머스 SQL 코딩테스트 기출문제 Lv1~Lv4 (join 및 group by 연습)
+
+###  ✏️ 3주차
+- **진행사항**
+<br> 1. 객체지향의 사실과 오해 리뷰 &nbsp; 2. SOLID 원칙에 기반한 프로젝트 리팩토링 &nbsp; 3. 실습(Tag, Board 엔티티 사이에 중간매핑테이블인 TagBridge활용하여 Tag list가 있는 board 상세조회 api 구현하기)
+
+- **과제**
+<br> 1. 책 블로그 발표 준비 
+<br> 2. JPA Entity 연관관계 매핑 연습
+<br> 3. 실습한 프로젝트 내용에 exceptionHandler로 exception 적용
