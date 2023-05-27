@@ -78,7 +78,7 @@
 </details>
 
  <details>
-<summary>3week(2023/05/27)</summary>
+<summary>4week(2023/05/27)</summary>
 <div markdown="1">
 
   * 책 - <클린코드> 리뷰
