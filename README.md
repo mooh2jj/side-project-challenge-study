@@ -41,7 +41,7 @@
 </details>
 
 <details>
-<summary>2week(2023/05/14)</summary>
+<summary>2week(2023/05/13)</summary>
 <div markdown="1">
 
   * 1:1 개인 면담 - 스터디원 needs 체크
@@ -60,7 +60,7 @@
 </details>
 
 <details>
-<summary>3week(2023/05/22)</summary>
+<summary>3week(2023/05/20)</summary>
 <div markdown="1">
 
   * 책 - <객.사.오> 리뷰
@@ -77,6 +77,24 @@
 </div>
 </details>
 
+ <details>
+<summary>3week(2023/05/27)</summary>
+<div markdown="1">
+
+  * 책 - <클린코드> 리뷰
+  * exceptionHandler 로 exception 처리 적용 설명
+  * 본격 사이드 프로젝트 진행 방식 및 구조 설명
+  * 실습 - 사이드 프로젝트 레벨 테스트 - coupon 도메인 crud api 실습 + 리스트 조회 api 내 status 필터링 
+  * 미션
+  ```
+  1) 팀원이 정해진 후 사이드 프로젝트 주제선정
+  2) 실습 내용 , enum filter api + 페이징(paging) 적용해보기!
+  3) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
+  ```
+ * 노션정리 - https://rain-tank-b79.notion.site/4week-d7439507b5b147fc927e5c144bf46bfc
+
+</div>
+</details>
 
 <br>
 
