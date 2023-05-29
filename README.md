@@ -40,6 +40,62 @@
 </div>
 </details>
 
+<details>
+<summary>2week(2023/05/13)</summary>
+<div markdown="1">
+
+  * 1:1 개인 면담 - 스터디원 needs 체크
+  * git 명령어 + mysql 정리 + linux 실습
+  * 실습 - REST API 문자열 반환 get api -> gradle build -> jar (로컬) + aws ec2 서버 deploy
+  * 과제
+  ```
+  1) 실습 rest api 프로젝트 git 연동 -> aws ec2 서버 deploy (jar 실행)
+  2) shell script 로 aws ec2 서버 deploy (jar 실행) 자동배포 
+  3) mysql 명령어 연습 - 프로그래머스 SQL 코딩테스트 기출문제 Lv1~Lv4 20문제 풀기 (join, groupBy는 꼭 연습!)
+  4) 책 최소 3권 정하기 -> 다음 주 1권 채택 블로그 정리 발표 준비!
+  ```
+ * 노션정리 - https://www.notion.so/2week-9fd123cd225f4755a70019061d210a05
+
+</div>
+</details>
+
+<details>
+<summary>3week(2023/05/20)</summary>
+<div markdown="1">
+
+  * 책 - <객.사.오> 리뷰
+  * 실습 - SOLID 원칙에 기반한 프로그래밍 리팩토링 - orderDish
+  * 실습 - tag, board 사이에 중간매핑테이블을 활용하여 tag 리스트가 있는 board 상세 조회 api
+  * 미션
+  ```
+  1) 책 블로그 발표 준비
+  2) JPA Entity 연관관계 매핑 연습
+  2) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
+  ```
+ * 노션정리 - https://rain-tank-b79.notion.site/3week-9a782c2a3f7b48a584077d0f89d5c558
+
+</div>
+</details>
+
+ <details>
+<summary>4week(2023/05/27)</summary>
+<div markdown="1">
+
+  * 책 - <클린코드> 리뷰
+  * exceptionHandler 로 exception 처리 적용 설명
+  * 본격 사이드 프로젝트 진행 방식 및 구조 설명
+  * 실습 - 사이드 프로젝트 레벨 테스트 - coupon 도메인 crud api 실습 + 리스트 조회 api 내 status 필터링 
+  * 미션
+  ```
+  1) 팀원이 정해진 후 사이드 프로젝트 주제선정
+  2) 실습 내용 , enum filter api + 페이징(paging) 적용해보기!
+  3) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
+  ```
+ * 노션정리 - https://rain-tank-b79.notion.site/4week-d7439507b5b147fc927e5c144bf46bfc
+
+</div>
+</details>
+
 <br>
 
 # 🎃 주의사항
