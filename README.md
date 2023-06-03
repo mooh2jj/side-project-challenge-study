@@ -107,11 +107,11 @@
   ```
   1) MVP 다시 설정 > ERD 설계 (비-식별관계, JPA ddl-auto 없이 설정, 중간매핑테이블 직접 만들기 생각할 것!)
   2) Querydsl 2.6 이상 환결세팅 동적쿼리
-  3) status에 따라 동적쿼리 만들기 ex. url /api/coupon?page=1?&size=10?type=DISCOUNT?startAt=2020-08-10&endAt=2022-08-10
+  3) filter 조건에 따라 동적쿼리 & 조회 api 구현 ex) url /api/coupon?page=1?&size=10?type=DISCOUNT?startAt=2020-08-10&endAt=2022-08-10
      * startAt, endAt은 쿠폰 사용가능시작일, 사용가능마지막일임
   4) paging도 추가 -> paging info를 커스텀 Dto에 매핑해서 response 하기 
   ```
- * 노션정리 - https://rain-tank-b79.notion.site/4week-d7439507b5b147fc927e5c144bf46bfc
+ * 노션정리 - https://www.notion.so/6week-4f751a5f855242a0b33a3350aff765cc?pvs=4
 
 </div>
 </details>
