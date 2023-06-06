@@ -90,17 +90,14 @@ public class TestController {
 
     // 학생 이름, 과목, 성적 입력  ==>  평균 출력
     @PostMapping("/test5")
-    public ResponseEntity<?> test5(
-            @Valid @RequestBody List<StudentRequestDto> requestDtos     // 컬렉션을 바로 넣는 것은 위험하다. @Valid가 안통한다
-    ) {
+    public ResponseEntity<?> test5(@Valid @RequestBody List<StudentRequestDto> requestDtos) {  // 컬렉션을 바로 넣는 것은 위험하다. @Valid가 안통한다
         return new ResponseEntity<>(studentService.getStudentAverage(requestDtos), HttpStatus.CREATED);
     }
 
     // search list
     @GetMapping("/test6")
-    public ResponseEntity<?> test6(
-       SearchRequestDto requestDto
-    ) {
+    public ResponseEntity<?> test6(SearchRequestDto requestDto) {
+
         List<SearchResponseDto> list = studentService.getStudentList(requestDto);
         log.info("list : {}", list);
 
