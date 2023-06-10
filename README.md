@@ -116,6 +116,23 @@
 
 </div>
 </details>
+  
+<details>
+<summary>5week(2023/06/10)</summary>
+<div markdown="1">
+
+  * security + jwt 내용 기술발표
+  * 카테고리 리스트 중간매핑 테이블를 통해 리스트 조회하기 실습 
+  * 미션
+  ```
+  1) security config 설정(+jwt) 방식 각 개인 프로젝트에 적용하기
+  2) 카테고리 실습 마저 하기
+  3) JUnit 5 테스트코드 Service Test vs Entity Test 차이점 알아오 
+  ```
+ * 노션정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533?pvs=4
+
+</div>
+</details>
 
 <br>
 
