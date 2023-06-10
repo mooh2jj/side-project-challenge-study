@@ -118,7 +118,7 @@
 </details>
   
 <details>
-<summary>5week(2023/06/10)</summary>
+<summary>6week(2023/06/10)</summary>
 <div markdown="1">
 
   * security + jwt 내용 기술발표
