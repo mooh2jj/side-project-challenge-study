@@ -121,7 +121,7 @@
 <summary>6week(2023/06/10)</summary>
 <div markdown="1">
 
-  * security + jwt 내용 기술발표
+  * security + jwt 내용(5가지 포인트!) 기술발표
   * 카테고리 리스트 중간매핑 테이블를 통해 리스트 조회하기 실습 
   * 미션
   ```
