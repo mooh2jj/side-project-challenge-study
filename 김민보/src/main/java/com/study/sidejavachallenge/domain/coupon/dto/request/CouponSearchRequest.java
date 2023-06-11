@@ -4,6 +4,8 @@ import com.study.sidejavachallenge.domain.coupon.entity.CouponStatus;
 import com.study.sidejavachallenge.domain.coupon.entity.CouponType;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 

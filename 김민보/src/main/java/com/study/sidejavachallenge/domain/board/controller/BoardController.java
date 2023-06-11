@@ -1,5 +1,6 @@
 package com.study.sidejavachallenge.domain.board.controller;
 
+import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListResponse;
 import com.study.sidejavachallenge.domain.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -24,4 +25,15 @@ public class BoardController {
 
         return ResponseEntity.ok(board);
     }
+
+    @GetMapping("/api/boards/{boardId}/category")
+    public ResponseEntity<?> getBoardWithCategory(@PathVariable Long boardId) {
+
+        BoardWithCategoryDto boardDto = boardService.getBoardWithCategory(boardId);
+        log.info("boardDto = {}", boardDto);
+
+        return ResponseEntity.ok(boardDto);
+    }
+
+
 }

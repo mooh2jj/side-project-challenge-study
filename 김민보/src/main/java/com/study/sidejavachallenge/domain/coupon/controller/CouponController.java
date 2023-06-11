@@ -28,8 +28,8 @@ public class CouponController {
         return new ResponseEntity<>(coupon, HttpStatus.CREATED);
     }
 
-    @GetMapping("/api/coupon/{createdAt}")
-    public List<CouponResponse> getList(@PathVariable CouponSearchRequest createdAt) {
+    @GetMapping("/api/coupon")
+    public List<CouponResponse> getList(CouponSearchRequest createdAt) {
 
         log.info("CouponController클래스의 getList() 메서드실행");
 

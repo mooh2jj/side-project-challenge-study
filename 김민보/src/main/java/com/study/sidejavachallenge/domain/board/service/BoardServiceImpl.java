@@ -1,5 +1,6 @@
 package com.study.sidejavachallenge.domain.board.service;
 
+import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.TagResponse;
 import com.study.sidejavachallenge.domain.board.entity.Board;
@@ -33,6 +34,16 @@ public class BoardServiceImpl implements BoardService{
                         .map(tagBridge -> TagResponse.mapToDto(tagBridge.getTag()))
                         .collect(Collectors.toList()))
                 .build();
+    }
+
+    @Override
+    public BoardWithCategoryDto getBoardWithCategory(Long boardId) {
+        log.info("BoardServiceImpl getBoardWithCategory() run");
+        // category 정보를 어떻게 가져올 것인가?
+        Board board = boardRepository.findById(boardId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. boardId=" + boardId));
+
+        return BoardWithCategoryDto.mapToDto(board);
     }
 
 //    @Override

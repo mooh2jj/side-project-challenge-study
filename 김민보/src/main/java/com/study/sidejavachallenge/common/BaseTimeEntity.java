@@ -18,7 +18,7 @@ public abstract class BaseTimeEntity {
     private LocalDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at", columnDefinition = "TIMESTAMP")
+    @Column(name = "modified_at", columnDefinition = "TIMESTAMP")
     private LocalDateTime modifiedAt;
 
     @PrePersist
