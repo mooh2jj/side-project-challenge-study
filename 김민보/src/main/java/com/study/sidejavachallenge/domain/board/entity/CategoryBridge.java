@@ -1,10 +1,7 @@
 package com.study.sidejavachallenge.domain.board.entity;
 
 import com.study.sidejavachallenge.common.BaseTimeEntity;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -30,4 +27,10 @@ public class CategoryBridge extends BaseTimeEntity {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    @Builder
+    public CategoryBridge(Long id, Board board, Category category) {
+        this.id = id;
+        this.board = board;
+        this.category = category;
+    }
 }

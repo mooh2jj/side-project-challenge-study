@@ -1,15 +1,19 @@
 package com.study.sidejavachallenge.domain.board.service;
 
+import com.study.sidejavachallenge.domain.board.dto.request.BoardRequestDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListResponse;
+import com.study.sidejavachallenge.domain.board.dto.response.CategoryResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.TagResponse;
 import com.study.sidejavachallenge.domain.board.entity.Board;
+import com.study.sidejavachallenge.domain.board.entity.Category;
 import com.study.sidejavachallenge.domain.board.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -44,6 +48,12 @@ public class BoardServiceImpl implements BoardService{
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. boardId=" + boardId));
 
         return BoardWithCategoryDto.mapToDto(board);
+    }
+
+    @Override
+    public List<BoardWithCategoryDto> getCategoriesByBoardId(BoardRequestDto boardRequestDto) {
+        log.info("BoardServiceImpl getCategoriesByBoardId() run");
+        return boardRepository.findBoards(boardRequestDto);
     }
 
 //    @Override

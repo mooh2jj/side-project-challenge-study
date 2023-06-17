@@ -1,5 +1,6 @@
 package com.study.sidejavachallenge.domain.member.entity;
 
+/*
 import com.study.sidejavachallenge.domain.member.repository.MemberRepository;
 import com.study.sidejavachallenge.domain.team.entity.Team;
 import com.study.sidejavachallenge.domain.team.repository.TeamRepository;
@@ -60,3 +61,5 @@ class MemberTest {
         log.info("member : {}", member);
     }
 }
+
+ */

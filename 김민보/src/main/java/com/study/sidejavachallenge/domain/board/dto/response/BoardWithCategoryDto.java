@@ -17,7 +17,7 @@ public class BoardWithCategoryDto {
     private final String minorCategoryTitle;
     private final String minimumCategoryTitle;
 
-    public static BoardWithCategoryDto mapToDto(Board board) {
+    static public BoardWithCategoryDto mapToDto(Board board) {
         return BoardWithCategoryDto.builder()
                 .id(board.getId())
                 .title(board.getTitle())

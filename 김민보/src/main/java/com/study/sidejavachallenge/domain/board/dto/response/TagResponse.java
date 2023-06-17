@@ -20,7 +20,7 @@ public class TagResponse {
         this.titleEng = titleEng;
     }
 
-     public static TagResponse mapToDto(Tag tag) {
+    static public TagResponse mapToDto(Tag tag) {
         return TagResponse.builder()
                 .tagId(tag.getId())
                 .titleKor(tag.getTitleKor())

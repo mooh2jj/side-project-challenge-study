@@ -45,5 +45,4 @@ public class Category extends BaseTimeEntity {
         this.logo = logo;
         this.status = status;
     }
-
 }
