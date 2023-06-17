@@ -134,6 +134,29 @@
 </div>
 </details>
 
+<details>
+<summary>7week(2023/06/17)</summary>
+<div markdown="1">
+
+  * 카테고리 리스트로 주테이블 검색 조회 + querydsl + 동적쿼리 활용
+  * JUnit 5 테스트코드 Service Test vs Entity Test 차이점 코드로 확인
+  * 미션
+  ```
+  1) 카테고리 Validation 실습 - 조회시, 카테고리 최소 3개인지 검증 
+  2) 카테고리 삭제 -> status = 'REMOVE' 변경[PATCH] 
+  3) 태그 삭제 -> 실제DB row 삭제[DELETE]
+     * 둘의 삭제 차이, bridge(중간매핑테이블)의 삭제까지 하는 것은 태그만!
+     * 태그는 casecade 옵션 속성을 사용하여 bridge의 해당 tagId를 가진 row 삭제하기
+  4) 주테이블 등록시, 태그, 카테고리 4개까지 등록하기 (둘다 pk 값으로 등록)
+     * validattion 추가 - 태그, 카테고리 둘다 이미 기존의 주테이블에 등록된 게 있다면 삭제가 안되게!
+
+  5) Junit5 테스트코드로, 엔티티테스트로 태그, 카테고리 validation 테스트코드 작성하기
+  ```
+ * 노션정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a?pvs=4
+
+</div>
+</details>
+
 <br>
 
 # 🎃 주의사항
