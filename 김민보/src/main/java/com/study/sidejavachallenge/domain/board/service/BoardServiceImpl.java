@@ -3,16 +3,13 @@ package com.study.sidejavachallenge.domain.board.service;
 import com.study.sidejavachallenge.domain.board.dto.request.BoardRequestDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListResponse;
-import com.study.sidejavachallenge.domain.board.dto.response.CategoryResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.TagResponse;
 import com.study.sidejavachallenge.domain.board.entity.Board;
-import com.study.sidejavachallenge.domain.board.entity.Category;
 import com.study.sidejavachallenge.domain.board.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,6 +37,7 @@ public class BoardServiceImpl implements BoardService{
                 .build();
     }
 
+    // boardId를 통해 최대 4뎁스를 갖는 category 출력하기
     @Override
     public BoardWithCategoryDto getBoardWithCategory(Long boardId) {
         log.info("BoardServiceImpl getBoardWithCategory() run");
@@ -50,6 +48,7 @@ public class BoardServiceImpl implements BoardService{
         return BoardWithCategoryDto.mapToDto(board);
     }
 
+    // 요청파라미터를 categoryList(categoryIds=1,2,3,4)로 보내고 반환은 boardList로 받기
     @Override
     public List<BoardWithCategoryDto> getCategoriesByBoardId(BoardRequestDto boardRequestDto) {
         log.info("BoardServiceImpl getCategoriesByBoardId() run");

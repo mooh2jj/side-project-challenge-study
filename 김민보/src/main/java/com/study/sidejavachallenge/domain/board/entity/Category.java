@@ -2,7 +2,6 @@ package com.study.sidejavachallenge.domain.board.entity;
 
 import com.study.sidejavachallenge.common.BaseTimeEntity;
 import lombok.*;
-
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -37,7 +36,7 @@ public class Category extends BaseTimeEntity {
     private Set<Category> childCategorySet = new LinkedHashSet<>();
 
     @Builder
-    public Category(Long id, Long parentId, CategoryStatus status, String title, String ord, String logo) {
+    public Category(Long id, Long parentId, String title, String ord, String logo, CategoryStatus status) {
         this.id = id;
         this.parentId = parentId;
         this.title = title;

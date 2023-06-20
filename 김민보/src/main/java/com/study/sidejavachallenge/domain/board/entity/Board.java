@@ -3,9 +3,8 @@ package com.study.sidejavachallenge.domain.board.entity;
 import com.study.sidejavachallenge.common.BaseTimeEntity;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
-
 import javax.persistence.*;
-import javax.swing.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,13 +42,14 @@ public class Board extends BaseTimeEntity {
 
         List<Category> majorCategories = getCategoryBridges().stream()
                 .map(CategoryBridge::getCategory)
-                .filter(category -> category.getOrd().equals("0"))
+                .filter(category -> Arrays.stream(category.getOrd().split("\\.")).map(Integer::parseInt).count() == 1)
                 .collect(Collectors.toList());
 
         if (majorCategories.isEmpty()) {
             return null;
         }
 
+        log.info("majorCategories size: {}", majorCategories.size());
         log.info("majorCategories: {}", majorCategories);
         log.info("majorCategories.get(0).getTitle(): {}", majorCategories.get(0).getTitle());
 
@@ -60,50 +60,53 @@ public class Board extends BaseTimeEntity {
 
         List<Category> subCategories = getCategoryBridges().stream()
                 .map(CategoryBridge::getCategory)
-                .filter(category -> category.getParentId() != null)
+                .filter(category -> Arrays.stream(category.getOrd().split("\\.")).map(Integer::parseInt).count() == 2)
                 .collect(Collectors.toList());
 
         if (subCategories.isEmpty()) {
             return null;
         }
 
+        log.info("subCategories size: {}", subCategories.size());
         log.info("subCategories: {}", subCategories);
-        log.info("subCategories.get(1).getTitle(): {}", subCategories.get(1).getTitle());
+        log.info("subCategories.get(1).getTitle(): {}", subCategories.get(0).getTitle());
 
-        return subCategories.get(1).getTitle();
+        return subCategories.get(0).getTitle();
     }
 
     public String getMinorCategoryTitle() {
 
         List<Category> minorCategories = getCategoryBridges().stream()
                 .map(CategoryBridge::getCategory)
-                .filter(category -> category.getParentId() != null)
+                .filter(category -> Arrays.stream(category.getOrd().split("\\.")).map(Integer::parseInt).count() == 3)
                 .collect(Collectors.toList());
 
-        if (minorCategories.size() < 2) {
+        if (minorCategories.isEmpty()) {
             return null;
         }
 
+        log.info("minorCategories size: {}", minorCategories.size());
         log.info("minorCategories: {}", minorCategories);
-        log.info("minorCategories.get(2).getTitle(): {}", minorCategories.get(2).getTitle());
+        log.info("minorCategories.get(2).getTitle(): {}", minorCategories.get(0).getTitle());
 
-        return minorCategories.get(2).getTitle();
+        return minorCategories.get(0).getTitle();
     }
 
     public String getMinimumCategoryTitle() {
 
         List<Category> minimumCategories = getCategoryBridges().stream()
                 .map(CategoryBridge::getCategory)
-                .filter(category -> category.getParentId() != null)
+                .filter(category -> Arrays.stream(category.getOrd().split("\\.")).map(Integer::parseInt).count() == 4)
                 .collect(Collectors.toList());
 
-        if (minimumCategories.size() < 3) {
+        if (minimumCategories.isEmpty()) {
             return null;
         }
 
+        log.info("minimumCategories size: {}", minimumCategories.size());
         log.info("minimumCategories: {}", minimumCategories);
-        log.info("minimumCategories.get(3).getTitle(): {}", minimumCategories.get(3).getTitle());
+        log.info("minimumCategories.get(3).getTitle(): {}", minimumCategories.get(0).getTitle());
 
-        return minimumCategories.get(3).getTitle();
+        return minimumCategories.get(0).getTitle();
     }
 }
