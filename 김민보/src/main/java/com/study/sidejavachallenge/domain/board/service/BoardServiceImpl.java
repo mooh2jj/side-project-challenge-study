@@ -1,6 +1,7 @@
 package com.study.sidejavachallenge.domain.board.service;
 
 import com.study.sidejavachallenge.domain.board.dto.request.BoardRequestDto;
+import com.study.sidejavachallenge.domain.board.dto.response.BoardResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.TagResponse;

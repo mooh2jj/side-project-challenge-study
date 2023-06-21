@@ -1,6 +1,7 @@
 package com.study.sidejavachallenge.domain.board.entity;
 
 import com.study.sidejavachallenge.common.BaseTimeEntity;
+import com.study.sidejavachallenge.domain.board.dto.response.CategoryResponse;
 import lombok.*;
 import javax.persistence.*;
 import java.util.LinkedHashSet;
@@ -43,5 +44,9 @@ public class Category extends BaseTimeEntity {
         this.ord = ord;
         this.logo = logo;
         this.status = status;
+    }
+
+    public void delete() {
+        this.status = CategoryStatus.REMOVE;
     }
 }
