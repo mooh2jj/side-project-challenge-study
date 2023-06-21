@@ -9,6 +9,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import java.util.List;
 
 @Getter
 @ToString

@@ -1,5 +1,6 @@
 package com.study.sidejavachallenge.domain.board.service;
 
+import com.study.sidejavachallenge.domain.board.dto.request.CategoryRequestDto;
 import com.study.sidejavachallenge.domain.board.dto.response.CategoryResponse;
 import com.study.sidejavachallenge.domain.board.entity.Category;
 import com.study.sidejavachallenge.domain.board.repository.CategoryRepository;
@@ -9,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
@@ -16,6 +19,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
+
+    @Override
+    public List<CategoryResponse> getCategory(CategoryRequestDto categoryRequestDto) {
+
+        return categoryRepository.findCategory(categoryRequestDto);
+    }
 
     // 카테고리 삭제 (실제 삭제가 아닌 상태변경)
     @Transactional
