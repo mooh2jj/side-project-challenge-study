@@ -1,5 +1,6 @@
 package com.study.sidejavachallenge.domain.board.controller;
 
+import com.study.sidejavachallenge.domain.board.dto.request.BoardCreateRequestDto;
 import com.study.sidejavachallenge.domain.board.dto.request.BoardRequestDto;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardResponse;
 import com.study.sidejavachallenge.domain.board.dto.response.BoardWithCategoryDto;
@@ -7,11 +8,10 @@ import com.study.sidejavachallenge.domain.board.dto.response.BoardWithTagListRes
 import com.study.sidejavachallenge.domain.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @Slf4j
@@ -47,5 +47,14 @@ public class BoardController {
         List<BoardWithCategoryDto> categoriesByBoardId = boardService.getCategoriesByBoardId(boardRequestDto);
 
         return ResponseEntity.ok(categoriesByBoardId);
+    }
+
+    // Board 생성시 태그, 카테고리 4개까지 등록하기
+    @PostMapping("/api/boards")
+    public ResponseEntity<BoardResponse> createBoard(@RequestBody BoardCreateRequestDto boardCreateRequestDto) {
+
+        BoardResponse boardResponse = boardService.createBoard(boardCreateRequestDto);
+
+        return ResponseEntity.ok(boardResponse);
     }
 }

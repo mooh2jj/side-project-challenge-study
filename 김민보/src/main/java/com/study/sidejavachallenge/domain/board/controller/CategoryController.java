@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Slf4j
@@ -23,7 +24,7 @@ public class CategoryController {
 
     // 카테고리 조회 (카테고리 최소 3개인지 검증)
     @GetMapping("/api/categories")
-    public ResponseEntity<List<CategoryResponse>> getCategory(CategoryRequestDto categoryRequestDto) {
+    public ResponseEntity<List<CategoryResponse>> getCategory(@Valid CategoryRequestDto categoryRequestDto) {
 
         List<CategoryResponse> category = categoryService.getCategory(categoryRequestDto);
         log.info("category = {}", category);
