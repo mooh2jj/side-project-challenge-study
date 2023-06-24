@@ -40,4 +40,12 @@ public class Tag extends BaseTimeEntity {
                 .titleEng(titleEng)
                 .build();
     }
+
+    public static Tag testMapToEntity(Long id, String titleKor, String titleEng) {
+        return Tag.builder()
+                .id(id)
+                .titleKor(titleKor)
+                .titleEng(titleEng)
+                .build();
+    }
 }

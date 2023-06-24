@@ -32,4 +32,18 @@ public class TagServiceImpl implements TagService {
                         .collect(Collectors.toList()))
                 .build();
     }
+
+    // 태그 삭제 ( cascade = CascadeType.ALL 설정으로 자식엔티티인 TagBridge도 삭제됨)
+    @Override
+    public TagResponse deleteTag(Long tagId) {
+        log.info("TagServiceImpl deleteTag() run");
+
+        Tag tag = tagRepository.findById(tagId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 태그가 없습니다. tagId=" + tagId));
+
+        log.info("findTag = {}", tag);
+        tagRepository.delete(tag);
+
+        return TagResponse.mapToDto(tag);
+    }
 }
