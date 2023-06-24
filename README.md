@@ -157,6 +157,25 @@
 </div>
 </details>
 
+<details>
+<summary>8week(2023/06/24)</summary>
+<div markdown="1">
+
+  * Map 활용하여, 브랜드별 주테이블 리스트 조회 /api/brand/{brandId}/board/list
+  * Swagger v3 활용하여 api 문서 만들기
+  * AWS S3 활용하여 이미지 업로드, 주테이블 등록시 MultipartFile 등록하기 실습
+  * 미션
+  ```
+  1) 구현능력에 우선순위를 두고 지난 스터디 실습 과정 못한 부분 점검
+  * JPA 연관관계 매핑, 1:N, N:N 관계시 조회와 등록 api
+  * Spring SecurityConfig 내 Jwt 웹토큰 인증&인가 방식
+  * Junit5 로 비즈니스 로직을 EntityTest로 검증
+  ```
+ * 노션정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a?pvs=4
+
+</div>
+</details>
+
 <br>
 
 # 🎃 주의사항
