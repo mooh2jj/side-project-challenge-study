@@ -54,7 +54,6 @@
   3) mysql 명령어 연습 - 프로그래머스 SQL 코딩테스트 기출문제 Lv1~Lv4 20문제 풀기 (join, groupBy는 꼭 연습!)
   4) 책 최소 3권 정하기 -> 다음 주 1권 채택 블로그 정리 발표 준비!
   ```
- * 노션정리 - https://www.notion.so/2week-9fd123cd225f4755a70019061d210a05
 
 </div>
 </details>
@@ -72,7 +71,6 @@
   2) JPA Entity 연관관계 매핑 연습
   2) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
   ```
- * 노션정리 - https://rain-tank-b79.notion.site/3week-9a782c2a3f7b48a584077d0f89d5c558
 
 </div>
 </details>
@@ -91,7 +89,6 @@
   2) 실습 내용 , enum filter api + 페이징(paging) 적용해보기!
   3) 실습한 프로젝트 내용에 exceptionHandler 로 exception 처리 적용
   ```
- * 노션정리 - https://rain-tank-b79.notion.site/4week-d7439507b5b147fc927e5c144bf46bfc
 
 </div>
 </details>
@@ -112,7 +109,6 @@
      * startAt, endAt은 쿠폰 사용가능시작일, 사용가능마지막일임
   4) paging도 추가 -> paging info를 커스텀 Dto에 매핑해서 response 하기 
   ```
- * 노션정리 - https://www.notion.so/6week-4f751a5f855242a0b33a3350aff765cc?pvs=4
 
 </div>
 </details>
@@ -129,7 +125,6 @@
   2) 카테고리 실습 마저 하기
   3) JUnit 5 테스트코드 Service Test vs Entity Test 차이점 알아오 
   ```
- * 노션정리 - https://www.notion.so/7week-31742d1b28f84f05a62f3a6a6e840533?pvs=4
 
 </div>
 </details>
@@ -152,7 +147,6 @@
 
   5) Junit5 테스트코드로, 엔티티테스트로 태그, 카테고리 validation 테스트코드 작성하기
   ```
- * 노션정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a?pvs=4
 
 </div>
 </details>
@@ -171,7 +165,6 @@
   * Spring SecurityConfig 내 Jwt 웹토큰 인증&인가 방식
   * Junit5 로 비즈니스 로직을 EntityTest로 검증
   ```
- * 노션정리 - https://www.notion.so/8week-524f487f951c475b853ce55106d61f8a?pvs=4
 
 </div>
 </details>
